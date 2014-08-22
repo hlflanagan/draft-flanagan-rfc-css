@@ -1,0 +1,169 @@
+
+
+
+
+Network Working Group                                        H. Flanagan
+Internet-Draft                                                RFC Editor
+Intended status: Informational                           August 22, 2014
+Expires: February 23, 2015
+
+
+                       CSS Requirements for RFCs
+                       draft-flanagan-rfc-css-00
+
+Abstract
+
+   While individuals may choose their own Cascading Style Sheet for
+   presenting HTML-formatted RFCs, the default offered by the RFC Editor
+   must meet certain requirements.  This draft describes those
+   requirements.
+
+   Discussion of this draft takes place on the rfc-interest mailing list
+   (rfc-interest@rfc-editor.org), which has its home page at https://www
+   .rfc-editor.org/mailman/listinfo/rfc-interest.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at http://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on February 23, 2015.
+
+Copyright Notice
+
+   Copyright (c) 2014 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents
+   (http://trustee.ietf.org/license-info) in effect on the date of
+   publication of this document.  Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+   to this document.  Code Components extracted from this document must
+
+
+
+Flanagan                Expires February 23, 2015               [Page 1]
+
+Internet-Draft                     I-D                       August 2014
+
+
+   include Simplified BSD License text as described in Section 4.e of
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  General Requirements  . . . . . . . . . . . . . . . . . . . .   2
+   3.  Page Layout . . . . . . . . . . . . . . . . . . . . . . . . .   2
+     3.1.  Title Page Header . . . . . . . . . . . . . . . . . . . .   2
+     3.2.  Body  . . . . . . . . . . . . . . . . . . . . . . . . . .   2
+     3.3.  Font Choices  . . . . . . . . . . . . . . . . . . . . . .   3
+   4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
+   5.  Normative References  . . . . . . . . . . . . . . . . . . . .   3
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   3
+
+1.  Introduction
+
+   [ Insert introduction here ]
+
+2.  General Requirements
+
+   o  Support the display of the semantic HTML described in
+      [draft-hildebrand-html-rfc].
+
+   o  Follow best practice for accessibility, mobile devices, and
+      internationalized scripts as defined by the W3C's Best Practices
+      for Authoring HTML [HTMLBP].
+
+3.  Page Layout
+
+3.1.  Title Page Header
+
+   The document header must be at the top of the page and include all
+   information described in the "Style Guide" and "RFC Streams, Headers,
+   and Boilerplates" [draft-iab-styleguide] [RFC5741]
+
+3.2.  Body
+
+   The body of the document must conform to the following:
+
+   o  Examples and code blocks must be in a fixed-width font
+
+   o  ASCII art must be in a fixed-width font
+
+   o  reflow the text as the screen gets smaller and limit max width
+
+   o  Block quotes must be indented
+
+
+
+Flanagan                Expires February 23, 2015               [Page 2]
+
+Internet-Draft                     I-D                       August 2014
+
+
+   o  Tables ???
+
+   o  Paragraphs should include a hover-over paragraph identifier
+
+3.3.  Font Choices
+
+   o  default to a font with full Unicode support; must be or include a
+      fixed-width font; publicly licensed
+
+4.  IANA Considerations
+
+   This draft contains no action for IANA
+
+5.  Normative References
+
+   [draft-iab-styleguide]
+              Flanagan, H. and S. Ginoza, "The RFC Style Guide", draft-
+              iab-styleguide-02 , April 2014.
+
+   [draft-hildebrand-html-rfc]
+              Hildebrand, J. and H. Flanagan, ed, "HyperText Markup
+              Language Request For Comments Format", draft-hildebrand-
+              html-rfc-03 , June 2014.
+
+   [HTMLBP]   W3C, "Best Practices for Authoring HTML Current Status",
+              n.d., <http://www.w3.org/standards/techs/htmlbp>.
+
+   [RFC5741]  Daigle, L., Kolkman, O., and IAB, "RFC Streams, Headers,
+              and Boilerplates", RFC 5741, December 2009.
+
+Author's Address
+
+   Heather Flanagan
+   RFC Editor
+
+   Email: rse@rfc-editor.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Flanagan                Expires February 23, 2015               [Page 3]
+

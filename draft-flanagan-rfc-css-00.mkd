@@ -1,0 +1,93 @@
+---
+title: CSS Requirements for RFCs
+abbrev: I-D
+docname: draft-flanagan-rfc-css-00
+date: 2014-08-22
+category: info
+ipr: trust200902
+pi:
+  toc: yes
+
+author:
+ -
+    ins: H. Flanagan
+    name: Heather Flanagan
+    organization: RFC Editor
+    email: rse@rfc-editor.org
+
+normative:
+  draft-iab-styleguide: 
+    title: "The RFC Style Guide"
+    author:
+      -
+        ins: H. Flanagan
+        name: Heather Flanagan
+      -
+        ins: S. Ginoza
+        name: Sandy Ginoza
+    date: April 2014
+    seriesinfo: draft-iab-styleguide-02
+  draft-hildebrand-html-rfc:
+    title: "HyperText Markup Language Request For Comments Format"
+    author:
+      -
+        ins: J. Hildebrand
+        name: Joe Hildebrand
+      -
+        ins: H. Flanagan, ed.
+        name: Heather Flanagan
+    date: June 2014
+    seriesinfo: draft-hildebrand-html-rfc-03
+  HTMLBP:
+    title: "Best Practices for Authoring HTML Current Status"
+    author:
+      org: W3C
+    target: http://www.w3.org/standards/techs/htmlbp
+  RFC5741:
+
+
+informative:
+
+--- abstract
+While individuals may choose their own Cascading Style Sheet for presenting HTML-formatted RFCs, the default offered by the RFC Editor must meet certain requirements.  This draft describes those requirements.
+
+Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.
+
+--- middle
+
+# Introduction
+
+[ Insert introduction here ]
+
+# General Requirements
+
+  * Support the display of the semantic HTML described in {{draft-hildebrand-html-rfc}}.
+
+  * Follow best practice for accessibility, mobile devices, and internationalized scripts as defined by the W3C's Best Practices for Authoring HTML {{HTMLBP}}.
+
+# Page Layout
+
+## Title Page Header
+The document header must be at the top of the page and include all information described in the "Style Guide" and "RFC Streams, Headers, and Boilerplates" {{draft-iab-styleguide}} {{RFC5741}}
+
+## Body
+The body of the document must conform to the following:
+
+  * Examples and code blocks must be in a fixed-width font
+
+  * ASCII art must be in a fixed-width font
+
+  * reflow the text as the screen gets smaller and limit max width 
+
+  * Block quotes must be indented 
+
+  * Tables ???
+
+  * Paragraphs should include a hover-over paragraph identifier
+
+## Font Choices
+  * default to a font with full Unicode support; must be or include a fixed-width font; publicly licensed
+
+
+# IANA Considerations
+This draft contains no action for IANA
