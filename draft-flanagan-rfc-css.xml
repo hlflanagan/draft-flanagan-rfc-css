@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <?xml-stylesheet type="text/xsl" href="rfc2629.xslt" ?>
+
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
+<!ENTITY RFC5741 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5741.xml">
+<!ENTITY RFC6949 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6949.xml">
+]>
+
+<rfc ipr="trust200902" docName="draft-flanagan-rfc-css-00" category="info">
+
+<?rfc toc="yes"?>
+
+  <front>
+    <title abbrev="I-D">CSS Requirements for RFCs</title>
+
+    <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
+      <organization>RFC Editor</organization>
+      <address>
+        
+        
+        <email>rse@rfc-editor.org</email>
+        
+      </address>
+    </author>
+
+    <date year="2014" month="September" day="09"/>
+
+    
+    
+    
+
+    <abstract>
+
+
+<t>While individuals may choose their own Cascading Style Sheet for presenting HTML-formatted RFCs, the default offered by the RFC Editor must meet certain requirements.  This draft describes those requirements.</t>
+
+<t>Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.</t>
+
+
+
+    </abstract>
+
+
+  </front>
+
+  <middle>
+
+
+<section anchor="introduction" title="Introduction">
+
+<t>The RFC Series has been in existence for over 40 years.  During much of that time, the limitations of character set, line and page lengths, and allowed graphics within RFC documents met the most immediate needs of the majority of authors and readers.  As technology changed, new formats that allowed for a richer set of edit, search, and display features came in to use, and tools were created to convert the plain ASCII documents to other desired formats such as HTML, PDF, and Microsoft Word.  While the converted versions of the RFCs are widely available, the canonical display format remains the plain-text, ASCII, line-printer structured one.</t>
+
+<t>In 2013, after a great deal of community discussion, the decision was made to shift from the plain-text, ASCII-only canonical format to XML <xref target="XML-ANNOUNCE"/>.  The high-level requirements for the format of RFCs were defined in "RFC Series Format Requirements and Future Development" <xref target="RFC6949"/>.  Several different publication formats will be rendered from that canonical XML, including HTML, PDF, TXT, and EPUB.</t>
+
+<t>As part of that work, the RFC Format Design Team recommended that the HTML publication format focus on semantic HTML, leaving style information in a Cascading Style Sheet (CSS).  While the RFC Editor must provide a default CSS, individuals may develop and use their own CSS locally.</t>
+
+<t>This document describes the requirements for the default CSS used by the RFC Editor.</t>
+
+</section>
+<section anchor="design-goals" title="Design Goals">
+
+<t>Looking for content that is adaptable to a wide variety of devices and displays, accessible to assisted readers, and printable.</t>
+
+</section>
+<section anchor="general-requirements" title="General Requirements">
+
+<t><list style='symbols'>
+  <t>Support the display of the semantic HTML described in <xref target="draft-hildebrand-html-rfc"/>.</t>
+  <t>Follow best practice for accessibility, as defined by the W3C's "Best Practices for Authoring HTML" <xref target="HTMLBP"/>.</t>
+  <t>Follow best practice for mobile devices, as defined by the W3C's "Best Practices for Authoring HTML."</t>
+  <t>Allow for a broad range of internationalized scripts.</t>
+</list></t>
+
+</section>
+<section anchor="page-layout" title="Page Layout">
+
+<section anchor="title-page-header" title="Title Page Header">
+
+<t>The document header must be at the top of the page and include all information described in the "Style Guide" and "RFC Streams, Headers, and Boilerplates" <xref target="draft-iab-styleguide"/> <xref target="RFC5741"/></t>
+
+</section>
+<section anchor="body" title="Body">
+
+<t>The body of the document must conform to the following:</t>
+
+<t><list style='symbols'>
+  <t>Examples and code blocks must be in a fixed-width font</t>
+  <t>ASCII art must be in a fixed-width font</t>
+  <t>reflow the text as the screen gets smaller and limit max width </t>
+  <t>Block quotes must be indented </t>
+  <t>Tables must allow for distinct header rows</t>
+  <t>Paragraphs should include a hover-over paragraph identifier</t>
+</list></t>
+
+</section>
+<section anchor="font-choices" title="Font Choices">
+
+<t><list style='symbols'>
+  <t>default to a font with full Unicode support; must be or include a fixed-width font; publicly licensed</t>
+</list></t>
+
+</section>
+</section>
+<section anchor="printing" title="Printing">
+
+<t>The CSS must include support for a printer-friendly output.</t>
+
+</section>
+<section anchor="security-considerations" title="Security Considerations">
+
+<t>Security vulnerabilities can be introduced through the CSS.  How much detail do we need to go into here to say "don't do foolish things and introduce security issues?"</t>
+
+</section>
+<section anchor="iana-considerations" title="IANA Considerations">
+
+<t>This draft contains no action for IANA</t>
+
+</section>
+
+
+  </middle>
+
+  <back>
+
+    <references title='Normative References'>
+
+<reference anchor="draft-iab-styleguide" >
+  <front>
+    <title>The RFC Style Guide</title>
+    <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
+      <organization></organization>
+    </author>
+    <author initials="S." surname="Ginoza" fullname="Sandy Ginoza">
+      <organization></organization>
+    </author>
+    <date year="2014" month="April"/>
+  </front>
+  <seriesInfo name="draft-iab-styleguide-02" value=""/>
+</reference>
+<reference anchor="draft-hildebrand-html-rfc" >
+  <front>
+    <title>HyperText Markup Language Request For Comments Format</title>
+    <author initials="J." surname="Hildebrand" fullname="Joe Hildebrand">
+      <organization></organization>
+    </author>
+    <author initials="H." surname="Flanagan, ed" fullname="Heather Flanagan">
+      <organization></organization>
+    </author>
+    <date year="2014" month="June"/>
+  </front>
+  <seriesInfo name="draft-hildebrand-html-rfc-03" value=""/>
+</reference>
+<reference anchor="HTMLBP" target="http://www.w3.org/standards/techs/htmlbp">
+  <front>
+    <title>Best Practices for Authoring HTML Current Status</title>
+    <author >
+      <organization>W3C</organization>
+    </author>
+    <date year="n.d."/>
+  </front>
+</reference>
+&RFC5741;
+&RFC6949;
+
+
+    </references>
+
+    <references title='Informative References'>
+
+<reference anchor="XML-ANNOUNCE" target="http://www.rfc-editor.org/pipermail/rfc-interest/2013-May/005584.html">
+  <front>
+    <title>Subject: [rfc-i] Direction of the RFC Format Development effort</title>
+    <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
+      <organization></organization>
+    </author>
+    <date year="2013" month="May"/>
+  </front>
+</reference>
+
+
+    </references>
+
+
+
+  </back>
+</rfc>
+
+

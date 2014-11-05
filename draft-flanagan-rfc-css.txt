@@ -1,0 +1,281 @@
+
+
+
+
+Network Working Group                                        H. Flanagan
+Internet-Draft                                                RFC Editor
+Intended status: Informational                        September 10, 2014
+Expires: March 14, 2015
+
+
+                       CSS Requirements for RFCs
+                       draft-flanagan-rfc-css-00
+
+Abstract
+
+   While individuals may choose their own Cascading Style Sheet for
+   presenting HTML-formatted RFCs, the default offered by the RFC Editor
+   must meet certain requirements.  This draft describes those
+   requirements.
+
+   Discussion of this draft takes place on the rfc-interest mailing list
+   (rfc-interest@rfc-editor.org), which has its home page at https://www
+   .rfc-editor.org/mailman/listinfo/rfc-interest.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at http://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on March 14, 2015.
+
+Copyright Notice
+
+   Copyright (c) 2014 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents
+   (http://trustee.ietf.org/license-info) in effect on the date of
+   publication of this document.  Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+   to this document.  Code Components extracted from this document must
+
+
+
+Flanagan                 Expires March 14, 2015                 [Page 1]
+
+Internet-Draft                     I-D                    September 2014
+
+
+   include Simplified BSD License text as described in Section 4.e of
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Design Goals  . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  General Requirements  . . . . . . . . . . . . . . . . . . . .   3
+   4.  Page Layout . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.1.  Title Page Header . . . . . . . . . . . . . . . . . . . .   3
+     4.2.  Body  . . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.3.  Font Choices  . . . . . . . . . . . . . . . . . . . . . .   3
+   5.  Printing  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
+   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
+     8.2.  Informative References  . . . . . . . . . . . . . . . . .   4
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+
+1.  Introduction
+
+   The RFC Series has been in existence for over 40 years.  During much
+   of that time, the limitations of character set, line and page
+   lengths, and allowed graphics within RFC documents met the most
+   immediate needs of the majority of authors and readers.  As
+   technology changed, new formats that allowed for a richer set of
+   edit, search, and display features came in to use, and tools were
+   created to convert the plain ASCII documents to other desired formats
+   such as HTML, PDF, and Microsoft Word.  While the converted versions
+   of the RFCs are widely available, the canonical display format
+   remains the plain-text, ASCII, line-printer structured one.
+
+   In 2013, after a great deal of community discussion, the decision was
+   made to shift from the plain-text, ASCII-only canonical format to XML
+   [XML-ANNOUNCE].  The high-level requirements for the format of RFCs
+   were defined in "RFC Series Format Requirements and Future
+   Development" [RFC6949].  Several different publication formats will
+   be rendered from that canonical XML, including HTML, PDF, TXT, and
+   EPUB.
+
+   As part of that work, the RFC Format Design Team recommended that the
+   HTML publication format focus on semantic HTML, leaving style
+   information in a Cascading Style Sheet (CSS).  While the RFC Editor
+   must provide a default CSS, individuals may develop and use their own
+   CSS locally.
+
+
+
+
+Flanagan                 Expires March 14, 2015                 [Page 2]
+
+Internet-Draft                     I-D                    September 2014
+
+
+   This document describes the requirements for the default CSS used by
+   the RFC Editor.
+
+2.  Design Goals
+
+   Looking for content that is adaptable to a wide variety of devices
+   and displays, accessible to assisted readers, and printable.
+
+3.  General Requirements
+
+   o  Support the display of the semantic HTML described in
+      [draft-hildebrand-html-rfc].
+
+   o  Follow best practice for accessibility, as defined by the W3C's
+      "Best Practices for Authoring HTML" [HTMLBP].
+
+   o  Follow best practice for mobile devices, as defined by the W3C's
+      "Best Practices for Authoring HTML."
+
+   o  Allow for a broad range of internationalized scripts.
+
+4.  Page Layout
+
+4.1.  Title Page Header
+
+   The document header must be at the top of the page and include all
+   information described in the "Style Guide" and "RFC Streams, Headers,
+   and Boilerplates" [draft-iab-styleguide] [RFC5741]
+
+4.2.  Body
+
+   The body of the document must conform to the following:
+
+   o  Examples and code blocks must be in a fixed-width font
+
+   o  ASCII art must be in a fixed-width font
+
+   o  reflow the text as the screen gets smaller and limit max width
+
+   o  Block quotes must be indented
+
+   o  Tables must allow for distinct header rows
+
+   o  Paragraphs should include a hover-over paragraph identifier
+
+4.3.  Font Choices
+
+
+
+
+
+Flanagan                 Expires March 14, 2015                 [Page 3]
+
+Internet-Draft                     I-D                    September 2014
+
+
+   o  default to a font with full Unicode support; must be or include a
+      fixed-width font; publicly licensed
+
+5.  Printing
+
+   The CSS must include support for a printer-friendly output.
+
+6.  Security Considerations
+
+   Security vulnerabilities can be introduced through the CSS.  How much
+   detail do we need to go into here to say "don't do foolish things and
+   introduce security issues?"
+
+7.  IANA Considerations
+
+   This draft contains no action for IANA
+
+8.  References
+
+8.1.  Normative References
+
+   [draft-iab-styleguide]
+              Flanagan, H. and S. Ginoza, "The RFC Style Guide", draft-
+              iab-styleguide-02 , April 2014.
+
+   [draft-hildebrand-html-rfc]
+              Hildebrand, J. and H. Flanagan, ed, "HyperText Markup
+              Language Request For Comments Format", draft-hildebrand-
+              html-rfc-03 , June 2014.
+
+   [HTMLBP]   W3C, "Best Practices for Authoring HTML Current Status",
+              n.d., <http://www.w3.org/standards/techs/htmlbp>.
+
+   [RFC5741]  Daigle, L., Kolkman, O., and IAB, "RFC Streams, Headers,
+              and Boilerplates", RFC 5741, December 2009.
+
+   [RFC6949]  Flanagan, H. and N. Brownlee, "RFC Series Format
+              Requirements and Future Development", RFC 6949, May 2013.
+
+8.2.  Informative References
+
+   [XML-ANNOUNCE]
+              Flanagan, H., "Subject: [rfc-i] Direction of the RFC
+              Format Development effort", May 2013, <http://www.rfc-
+              editor.org/pipermail/rfc-interest/2013-May/005584.html>.
+
+Author's Address
+
+
+
+
+Flanagan                 Expires March 14, 2015                 [Page 4]
+
+Internet-Draft                     I-D                    September 2014
+
+
+   Heather Flanagan
+   RFC Editor
+
+   Email: rse@rfc-editor.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Flanagan                 Expires March 14, 2015                 [Page 5]
+

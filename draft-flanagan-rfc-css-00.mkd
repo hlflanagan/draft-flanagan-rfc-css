@@ -2,7 +2,7 @@
 title: CSS Requirements for RFCs
 abbrev: I-D
 docname: draft-flanagan-rfc-css-00
-date: 2014-08-22
+date: 2014-09-09
 category: info
 ipr: trust200902
 pi:
@@ -44,9 +44,17 @@ normative:
       org: W3C
     target: http://www.w3.org/standards/techs/htmlbp
   RFC5741:
-
+  RFC6949:
 
 informative:
+  XML-ANNOUNCE:
+    title: "Subject: [rfc-i] Direction of the RFC Format Development effort"
+    author:
+      -
+        ins: H. Flanagan
+        name: Heather Flanagan
+    date: May 2013
+    target: http://www.rfc-editor.org/pipermail/rfc-interest/2013-May/005584.html
 
 --- abstract
 While individuals may choose their own Cascading Style Sheet for presenting HTML-formatted RFCs, the default offered by the RFC Editor must meet certain requirements.  This draft describes those requirements.
@@ -54,23 +62,39 @@ While individuals may choose their own Cascading Style Sheet for presenting HTML
 Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.
 
 --- middle
-
 # Introduction
 
-[ Insert introduction here ]
+The RFC Series has been in existence for over 40 years.  During much of that time, the limitations of character set, line and page lengths, and allowed graphics within RFC documents met the most immediate needs of the majority of authors and readers.  As technology changed, new formats that allowed for a richer set of edit, search, and display features came in to use, and tools were created to convert the plain ASCII documents to other desired formats such as HTML, PDF, and Microsoft Word.  While the converted versions of the RFCs are widely available, the canonical display format remains the plain-text, ASCII, line-printer structured one.
+
+In 2013, after a great deal of community discussion, the decision was made to shift from the plain-text, ASCII-only canonical format to XML {{XML-ANNOUNCE}}.  The high-level requirements for the format of RFCs were defined in "RFC Series Format Requirements and Future Development" {{RFC6949}}.  Several different publication formats will be rendered from that canonical XML, including HTML, PDF, TXT, and EPUB.
+
+As part of that work, the RFC Format Design Team recommended that the HTML publication format focus on semantic HTML, leaving style information in a Cascading Style Sheet (CSS).  While the RFC Editor must provide a default CSS, individuals may develop and use their own CSS locally.
+
+This document describes the requirements for the default CSS used by the RFC Editor.
+
+# Design Goals
+
+Looking for content that is adaptable to a wide variety of devices and displays, accessible to assisted readers, and printable.
 
 # General Requirements
 
   * Support the display of the semantic HTML described in {{draft-hildebrand-html-rfc}}.
 
-  * Follow best practice for accessibility, mobile devices, and internationalized scripts as defined by the W3C's Best Practices for Authoring HTML {{HTMLBP}}.
+  * Follow best practice for accessibility, as defined by the W3C's "Best Practices for Authoring HTML" {{HTMLBP}}.
+
+  * Follow best practice for mobile devices, as defined by the W3C's "Best Practices for Authoring HTML."
+
+  * Allow for a broad range of internationalized scripts.
 
 # Page Layout
 
+
 ## Title Page Header
+
 The document header must be at the top of the page and include all information described in the "Style Guide" and "RFC Streams, Headers, and Boilerplates" {{draft-iab-styleguide}} {{RFC5741}}
 
 ## Body
+
 The body of the document must conform to the following:
 
   * Examples and code blocks must be in a fixed-width font
@@ -81,13 +105,24 @@ The body of the document must conform to the following:
 
   * Block quotes must be indented 
 
-  * Tables ???
+  * Tables must allow for distinct header rows
 
   * Paragraphs should include a hover-over paragraph identifier
 
 ## Font Choices
+
   * default to a font with full Unicode support; must be or include a fixed-width font; publicly licensed
 
 
+# Printing
+
+The CSS must include support for a printer-friendly output.
+
+# Security Considerations
+
+Security vulnerabilities can be introduced through the CSS.  How much detail do we need to go into here to say "don't do foolish things and introduce security issues?"
+
 # IANA Considerations
+
 This draft contains no action for IANA
+
