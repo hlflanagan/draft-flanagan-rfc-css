@@ -2,8 +2,10 @@
   <?xml-stylesheet type="text/xsl" href="rfc2629.xslt" ?>
 
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
-<!ENTITY RFC5741 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5741.xml">
-<!ENTITY RFC6949 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6949.xml">
+<!ENTITY RFC5741 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5741.xml">
+<!ENTITY RFC7322 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7322.xml">
+<!ENTITY I-D.hildebrand-html-rfc SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.hildebrand-html-rfc.xml">
+<!ENTITY I-D.flanagan-rfc-framework SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.I-D.flanagan-rfc-framework.xml">
 ]>
 
 <rfc ipr="trust200902" docName="draft-flanagan-rfc-css-00" category="info">
@@ -23,7 +25,7 @@
       </address>
     </author>
 
-    <date year="2014" month="September" day="09"/>
+    <date year="2014" month="November" day="5"/>
 
     
     
@@ -48,13 +50,9 @@
 
 <section anchor="introduction" title="Introduction">
 
-<t>The RFC Series has been in existence for over 40 years.  During much of that time, the limitations of character set, line and page lengths, and allowed graphics within RFC documents met the most immediate needs of the majority of authors and readers.  As technology changed, new formats that allowed for a richer set of edit, search, and display features came in to use, and tools were created to convert the plain ASCII documents to other desired formats such as HTML, PDF, and Microsoft Word.  While the converted versions of the RFCs are widely available, the canonical display format remains the plain-text, ASCII, line-printer structured one.</t>
+<t>The HTML format for RFCs, described in <xref target="I-D.hildebrand-html-rfc"/> assigns style guidance to an RFC Editor-defined Cascading Style Sheet (CSS).  This CSS will be embedded in the published HTML, and may be overridden by a locally defined CSS as desired.</t>
 
-<t>In 2013, after a great deal of community discussion, the decision was made to shift from the plain-text, ASCII-only canonical format to XML <xref target="XML-ANNOUNCE"/>.  The high-level requirements for the format of RFCs were defined in "RFC Series Format Requirements and Future Development" <xref target="RFC6949"/>.  Several different publication formats will be rendered from that canonical XML, including HTML, PDF, TXT, and EPUB.</t>
-
-<t>As part of that work, the RFC Format Design Team recommended that the HTML publication format focus on semantic HTML, leaving style information in a Cascading Style Sheet (CSS).  While the RFC Editor must provide a default CSS, individuals may develop and use their own CSS locally.</t>
-
-<t>This document describes the requirements for the default CSS used by the RFC Editor.</t>
+<t>This document describes the requirements for the default CSS used by the RFC Editor.  The requirements will only be applied to HTML documents published as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
 
 </section>
 <section anchor="design-goals" title="Design Goals">
@@ -65,7 +63,7 @@
 <section anchor="general-requirements" title="General Requirements">
 
 <t><list style='symbols'>
-  <t>Support the display of the semantic HTML described in <xref target="draft-hildebrand-html-rfc"/>.</t>
+  <t>Support the display of the semantic HTML described in <xref target="I-D.hildebrand-html-rfc"/>.</t>
   <t>Follow best practice for accessibility, as defined by the W3C's "Best Practices for Authoring HTML" <xref target="HTMLBP"/>.</t>
   <t>Follow best practice for mobile devices, as defined by the W3C's "Best Practices for Authoring HTML."</t>
   <t>Allow for a broad range of internationalized scripts.</t>
@@ -76,7 +74,7 @@
 
 <section anchor="title-page-header" title="Title Page Header">
 
-<t>The document header must be at the top of the page and include all information described in the "Style Guide" and "RFC Streams, Headers, and Boilerplates" <xref target="draft-iab-styleguide"/> <xref target="RFC5741"/></t>
+<t>The document header must be at the top of the page and include all information described in the "Style Guide" and "RFC Streams, Headers, and Boilerplates" <xref target="RFC7322"/> <xref target="RFC5741"/></t>
 
 </section>
 <section anchor="body" title="Body">
@@ -111,6 +109,85 @@
 <t>Security vulnerabilities can be introduced through the CSS.  How much detail do we need to go into here to say "don't do foolish things and introduce security issues?"</t>
 
 </section>
+
+<section anchor="css-classes" title="CSS Classes and Attributes">
+<t>This section describes the CSS classes specific to RFCs.  Basic
+   selectors are not described.</t>
+
+  <section anchor="adr" title=".adr">
+  </section>
+
+  <section anchor="artwork" title=".artwork">
+  <t>To float, or not to float?</t>
+
+    <section anchor="art-" title=".art-ascii-art">
+    <t>Must use a mono-spaced font.</t>
+    </section>
+
+    <section anchor="art-svg" title=".art-svg">
+    </section>
+
+  </section>
+
+  <section anchor="bcp14" title=".bcp14">
+  <t>This will not result in any special action on the part of the RFC Editor CSS. Local CSS files may choose to highlight or otherwise emphasize keywords identified with this tag.</t>
+  </section>
+
+  <section anchor="country-name" title=".country-name">
+  </section>
+
+  <section anchor="cref" title=".cref">
+  <t>For I-Ds only; not for RFCs.</t>
+  </section>
+
+  <section anchor="email" title=".email">
+  </section>
+
+  <section anchor="eref" title=".eref">
+  </section>
+ 
+  <section anchor="locality" title=".locality">
+  </section>
+ 
+  <section anchor="olcompact" title=".olcompact">
+  </section>
+
+  <section anchor="org" title=".org">
+  </section>
+
+  <section anchor="postal-code" title=".postal-code">
+  </section>
+ 
+  <section anchor="published" title=".published">
+  </section>
+
+  <section anchor="refcontent" title=".refcontent">
+  </section>
+
+  <section anchor="region" title=".region">
+  </section>
+
+  <section anchor="rfceditor-remove" title=".rfceditor-remove">
+  <t>For I-Ds only; not for RFCs.</t>
+  </section>
+
+  <section anchor="self-ref" title=".self-ref">
+  </section>
+
+  <section anchor="seriesInfo" title=".seriesInfo">
+  </section>
+
+  <section anchor="sourcecode" title=".sourcecode">
+  <t>Must use a mono-spaced font.</t>
+  </section>
+
+  <section anchor="street-address" title=".street-address">
+  </section>
+
+  <section anchor="ulcompact" title=".ulcompact">
+  </section>
+</section>
+
 <section anchor="iana-considerations" title="IANA Considerations">
 
 <t>This draft contains no action for IANA</t>
@@ -124,32 +201,6 @@
 
     <references title='Normative References'>
 
-<reference anchor="draft-iab-styleguide" >
-  <front>
-    <title>The RFC Style Guide</title>
-    <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
-      <organization></organization>
-    </author>
-    <author initials="S." surname="Ginoza" fullname="Sandy Ginoza">
-      <organization></organization>
-    </author>
-    <date year="2014" month="April"/>
-  </front>
-  <seriesInfo name="draft-iab-styleguide-02" value=""/>
-</reference>
-<reference anchor="draft-hildebrand-html-rfc" >
-  <front>
-    <title>HyperText Markup Language Request For Comments Format</title>
-    <author initials="J." surname="Hildebrand" fullname="Joe Hildebrand">
-      <organization></organization>
-    </author>
-    <author initials="H." surname="Flanagan, ed" fullname="Heather Flanagan">
-      <organization></organization>
-    </author>
-    <date year="2014" month="June"/>
-  </front>
-  <seriesInfo name="draft-hildebrand-html-rfc-03" value=""/>
-</reference>
 <reference anchor="HTMLBP" target="http://www.w3.org/standards/techs/htmlbp">
   <front>
     <title>Best Practices for Authoring HTML Current Status</title>
@@ -160,27 +211,12 @@
   </front>
 </reference>
 &RFC5741;
-&RFC6949;
+&RFC7322;
+&I-D.hildebrand-html-rfc;
+&I-D.flanagan-rfc-framework;
 
 
     </references>
-
-    <references title='Informative References'>
-
-<reference anchor="XML-ANNOUNCE" target="http://www.rfc-editor.org/pipermail/rfc-interest/2013-May/005584.html">
-  <front>
-    <title>Subject: [rfc-i] Direction of the RFC Format Development effort</title>
-    <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
-      <organization></organization>
-    </author>
-    <date year="2013" month="May"/>
-  </front>
-</reference>
-
-
-    </references>
-
-
 
   </back>
 </rfc>
