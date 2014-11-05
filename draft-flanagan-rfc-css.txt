@@ -75,27 +75,28 @@ Table of Contents
    6.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
    7.  CSS Classes and Attributes  . . . . . . . . . . . . . . . . .   4
      7.1.  .adr  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     7.2.  .artwork  . . . . . . . . . . . . . . . . . . . . . . . .   4
+     7.2.  .art- . . . . . . . . . . . . . . . . . . . . . . . . . .   4
        7.2.1.  .art-ascii-art  . . . . . . . . . . . . . . . . . . .   4
        7.2.2.  .art-svg  . . . . . . . . . . . . . . . . . . . . . .   4
-     7.3.  .bcp14  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     7.4.  .country-name . . . . . . . . . . . . . . . . . . . . . .   4
-     7.5.  .cref . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     7.6.  .email  . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.7.  .eref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.8.  .locality . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.9.  .olcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.10. .org  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.11. .postal-code  . . . . . . . . . . . . . . . . . . . . . .   5
-     7.12. .published  . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.13. .refcontent . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.14. .region . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.15. .rfceditor-remove . . . . . . . . . . . . . . . . . . . .   5
-     7.16. .self-ref . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.17. .seriesInfo . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.18. .sourcecode . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.19. .street-address . . . . . . . . . . . . . . . . . . . . .   5
-     7.20. .ulcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.3.  .artwork  . . . . . . . . . . . . . . . . . . . . . . . .   4
+     7.4.  .bcp14  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     7.5.  .country-name . . . . . . . . . . . . . . . . . . . . . .   4
+     7.6.  .cref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.7.  .email  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.8.  .eref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.9.  .locality . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.10. .olcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.11. .org  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.12. .postal-code  . . . . . . . . . . . . . . . . . . . . . .   5
+     7.13. .published  . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.14. .refcontent . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.15. .region . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.16. .rfceditor-remove . . . . . . . . . . . . . . . . . . . .   5
+     7.17. .self-ref . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.18. .seriesInfo . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.19. .sourcecode . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.20. .street-address . . . . . . . . . . . . . . . . . . . . .   5
+     7.21. .ulcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
    8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
    9.  Normative References  . . . . . . . . . . . . . . . . . . . .   5
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
@@ -104,8 +105,7 @@ Table of Contents
 
    The HTML format for RFCs, described in [I-D.hildebrand-html-rfc]
    assigns style guidance to an RFC Editor-defined Cascading Style Sheet
-   (CSS).  This CSS will be embedded in the published HTML, and may be
-   overridden by a locally defined CSS as desired.
+
 
 
 
@@ -113,6 +113,9 @@ Flanagan                   Expires May 9, 2015                  [Page 2]
 
 Internet-Draft                     I-D                     November 2014
 
+
+   (CSS).  This CSS will be embedded in the published HTML, and may be
+   overridden by a locally defined CSS as desired.
 
    This document describes the requirements for the default CSS used by
    the RFC Editor.  The requirements will only be applied to HTML
@@ -162,9 +165,6 @@ Internet-Draft                     I-D                     November 2014
 
 
 
-
-
-
 Flanagan                   Expires May 9, 2015                  [Page 3]
 
 Internet-Draft                     I-D                     November 2014
@@ -192,9 +192,10 @@ Internet-Draft                     I-D                     November 2014
 
 7.1.  .adr
 
-7.2.  .artwork
+7.2.  .art-
 
-   To float, or not to float?
+   These classes will mostly be styled as part of .artwork.  Specific
+   classes may include '.art-ascii-art' and '.art-svg'.
 
 7.2.1.  .art-ascii-art
 
@@ -202,18 +203,17 @@ Internet-Draft                     I-D                     November 2014
 
 7.2.2.  .art-svg
 
-7.3.  .bcp14
+7.3.  .artwork
+
+   To float, or not to float?
+
+7.4.  .bcp14
 
    This will not result in any special action on the part of the RFC
    Editor CSS.  Local CSS files may choose to highlight or otherwise
    emphasize keywords identified with this tag.
 
-7.4.  .country-name
-
-7.5.  .cref
-
-   For I-Ds only; not for RFCs.
-
+7.5.  .country-name
 
 
 
@@ -226,39 +226,43 @@ Flanagan                   Expires May 9, 2015                  [Page 4]
 Internet-Draft                     I-D                     November 2014
 
 
-7.6.  .email
-
-7.7.  .eref
-
-7.8.  .locality
-
-7.9.  .olcompact
-
-7.10.  .org
-
-7.11.  .postal-code
-
-7.12.  .published
-
-7.13.  .refcontent
-
-7.14.  .region
-
-7.15.  .rfceditor-remove
+7.6.  .cref
 
    For I-Ds only; not for RFCs.
 
-7.16.  .self-ref
+7.7.  .email
 
-7.17.  .seriesInfo
+7.8.  .eref
 
-7.18.  .sourcecode
+7.9.  .locality
+
+7.10.  .olcompact
+
+7.11.  .org
+
+7.12.  .postal-code
+
+7.13.  .published
+
+7.14.  .refcontent
+
+7.15.  .region
+
+7.16.  .rfceditor-remove
+
+   For I-Ds only; not for RFCs.
+
+7.17.  .self-ref
+
+7.18.  .seriesInfo
+
+7.19.  .sourcecode
 
    Must use a mono-spaced font.
 
-7.19.  .street-address
+7.20.  .street-address
 
-7.20.  .ulcompact
+7.21.  .ulcompact
 
 8.  IANA Considerations
 
@@ -269,11 +273,7 @@ Internet-Draft                     I-D                     November 2014
    [HTMLBP]   W3C, "Best Practices for Authoring HTML Current Status",
               n.d., <http://www.w3.org/standards/techs/htmlbp>.
 
-   [RFC5741]  Daigle, L., Kolkman, O., and IAB, "RFC Streams, Headers,
-              and Boilerplates", RFC 5741, December 2009.
 
-   [RFC7322]  Flanagan, H. and S. Ginoza, "RFC Style Guide", RFC 7322,
-              September 2014.
 
 
 
@@ -281,6 +281,12 @@ Flanagan                   Expires May 9, 2015                  [Page 5]
 
 Internet-Draft                     I-D                     November 2014
 
+
+   [RFC5741]  Daigle, L., Kolkman, O., and IAB, "RFC Streams, Headers,
+              and Boilerplates", RFC 5741, December 2009.
+
+   [RFC7322]  Flanagan, H. and S. Ginoza, "RFC Style Guide", RFC 7322,
+              September 2014.
 
    [I-D.hildebrand-html-rfc]
               Hildebrand, J. and H. Flanagan, "HyperText Markup Language
@@ -297,12 +303,6 @@ Author's Address
    RFC Editor
 
    Email: rse@rfc-editor.org
-
-
-
-
-
-
 
 
 
