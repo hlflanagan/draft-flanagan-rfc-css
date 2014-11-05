@@ -117,16 +117,21 @@
   <section anchor="adr" title=".adr">
   </section>
 
-  <section anchor="artwork" title=".artwork">
-  <t>To float, or not to float?</t>
+  <section anchor="art-" title=".art-">
+  <t>These classes will mostly be styled as part of .artwork.  Specific
+  classes may include '.art-ascii-art' and '.art-svg'.</t>
 
-    <section anchor="art-" title=".art-ascii-art">
-    <t>Must use a mono-spaced font.</t>
+    <section anchor="art-ascii-art" title=".art-ascii-art">
+    <t>Must use a mono-spaced font.  </t>
     </section>
 
     <section anchor="art-svg" title=".art-svg">
     </section>
 
+  </section>
+
+  <section anchor="artwork" title=".artwork">
+  <t>To float, or not to float?</t>
   </section>
 
   <section anchor="bcp14" title=".bcp14">
