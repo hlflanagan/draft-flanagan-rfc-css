@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                        September 10, 2014
-Expires: March 14, 2015
+Intended status: Informational                          November 5, 2014
+Expires: May 9, 2015
 
 
                        CSS Requirements for RFCs
@@ -19,8 +19,8 @@ Abstract
    requirements.
 
    Discussion of this draft takes place on the rfc-interest mailing list
-   (rfc-interest@rfc-editor.org), which has its home page at https://www
-   .rfc-editor.org/mailman/listinfo/rfc-interest.
+   (rfc-interest@rfc-editor.org), which has its home page at
+   https://www.rfc-editor.org/mailman/listinfo/rfc-interest.
 
 Status of This Memo
 
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on March 14, 2015.
+   This Internet-Draft will expire on May 9, 2015.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Flanagan                 Expires March 14, 2015                 [Page 1]
+Flanagan                   Expires May 9, 2015                  [Page 1]
 
-Internet-Draft                     I-D                    September 2014
+Internet-Draft                     I-D                     November 2014
 
 
    include Simplified BSD License text as described in Section 4.e of
@@ -70,52 +70,53 @@ Table of Contents
    4.  Page Layout . . . . . . . . . . . . . . . . . . . . . . . . .   3
      4.1.  Title Page Header . . . . . . . . . . . . . . . . . . . .   3
      4.2.  Body  . . . . . . . . . . . . . . . . . . . . . . . . . .   3
-     4.3.  Font Choices  . . . . . . . . . . . . . . . . . . . . . .   3
+     4.3.  Font Choices  . . . . . . . . . . . . . . . . . . . . . .   4
    5.  Printing  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
    6.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
-   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
-     8.2.  Informative References  . . . . . . . . . . . . . . . . .   4
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+   7.  CSS Classes and Attributes  . . . . . . . . . . . . . . . . .   4
+     7.1.  .adr  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     7.2.  .artwork  . . . . . . . . . . . . . . . . . . . . . . . .   4
+       7.2.1.  .art-ascii-art  . . . . . . . . . . . . . . . . . . .   4
+       7.2.2.  .art-svg  . . . . . . . . . . . . . . . . . . . . . .   4
+     7.3.  .bcp14  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     7.4.  .country-name . . . . . . . . . . . . . . . . . . . . . .   4
+     7.5.  .cref . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     7.6.  .email  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.7.  .eref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.8.  .locality . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.9.  .olcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.10. .org  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.11. .postal-code  . . . . . . . . . . . . . . . . . . . . . .   5
+     7.12. .published  . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.13. .refcontent . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.14. .region . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.15. .rfceditor-remove . . . . . . . . . . . . . . . . . . . .   5
+     7.16. .self-ref . . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.17. .seriesInfo . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.18. .sourcecode . . . . . . . . . . . . . . . . . . . . . . .   5
+     7.19. .street-address . . . . . . . . . . . . . . . . . . . . .   5
+     7.20. .ulcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
+   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
+   9.  Normative References  . . . . . . . . . . . . . . . . . . . .   5
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
-   The RFC Series has been in existence for over 40 years.  During much
-   of that time, the limitations of character set, line and page
-   lengths, and allowed graphics within RFC documents met the most
-   immediate needs of the majority of authors and readers.  As
-   technology changed, new formats that allowed for a richer set of
-   edit, search, and display features came in to use, and tools were
-   created to convert the plain ASCII documents to other desired formats
-   such as HTML, PDF, and Microsoft Word.  While the converted versions
-   of the RFCs are widely available, the canonical display format
-   remains the plain-text, ASCII, line-printer structured one.
-
-   In 2013, after a great deal of community discussion, the decision was
-   made to shift from the plain-text, ASCII-only canonical format to XML
-   [XML-ANNOUNCE].  The high-level requirements for the format of RFCs
-   were defined in "RFC Series Format Requirements and Future
-   Development" [RFC6949].  Several different publication formats will
-   be rendered from that canonical XML, including HTML, PDF, TXT, and
-   EPUB.
-
-   As part of that work, the RFC Format Design Team recommended that the
-   HTML publication format focus on semantic HTML, leaving style
-   information in a Cascading Style Sheet (CSS).  While the RFC Editor
-   must provide a default CSS, individuals may develop and use their own
-   CSS locally.
+   The HTML format for RFCs, described in [I-D.hildebrand-html-rfc]
+   assigns style guidance to an RFC Editor-defined Cascading Style Sheet
+   (CSS).  This CSS will be embedded in the published HTML, and may be
+   overridden by a locally defined CSS as desired.
 
 
 
-
-Flanagan                 Expires March 14, 2015                 [Page 2]
+Flanagan                   Expires May 9, 2015                  [Page 2]
 
-Internet-Draft                     I-D                    September 2014
+Internet-Draft                     I-D                     November 2014
 
 
    This document describes the requirements for the default CSS used by
-   the RFC Editor.
+   the RFC Editor.  The requirements will only be applied to HTML
+   documents published as per [I-D.flanagan-rfc-framework].
 
 2.  Design Goals
 
@@ -125,7 +126,7 @@ Internet-Draft                     I-D                    September 2014
 3.  General Requirements
 
    o  Support the display of the semantic HTML described in
-      [draft-hildebrand-html-rfc].
+      [I-D.hildebrand-html-rfc].
 
    o  Follow best practice for accessibility, as defined by the W3C's
       "Best Practices for Authoring HTML" [HTMLBP].
@@ -141,7 +142,7 @@ Internet-Draft                     I-D                    September 2014
 
    The document header must be at the top of the page and include all
    information described in the "Style Guide" and "RFC Streams, Headers,
-   and Boilerplates" [draft-iab-styleguide] [RFC5741]
+   and Boilerplates" [RFC7322] [RFC5741]
 
 4.2.  Body
 
@@ -159,16 +160,17 @@ Internet-Draft                     I-D                    September 2014
 
    o  Paragraphs should include a hover-over paragraph identifier
 
-4.3.  Font Choices
 
 
 
 
 
-Flanagan                 Expires March 14, 2015                 [Page 3]
+Flanagan                   Expires May 9, 2015                  [Page 3]
 
-Internet-Draft                     I-D                    September 2014
+Internet-Draft                     I-D                     November 2014
 
+
+4.3.  Font Choices
 
    o  default to a font with full Unicode support; must be or include a
       fixed-width font; publicly licensed
@@ -183,22 +185,86 @@ Internet-Draft                     I-D                    September 2014
    detail do we need to go into here to say "don't do foolish things and
    introduce security issues?"
 
-7.  IANA Considerations
+7.  CSS Classes and Attributes
+
+   This section describes the CSS classes specific to RFCs.  Basic
+   selectors are not described.
+
+7.1.  .adr
+
+7.2.  .artwork
+
+   To float, or not to float?
+
+7.2.1.  .art-ascii-art
+
+   Must use a mono-spaced font.
+
+7.2.2.  .art-svg
+
+7.3.  .bcp14
+
+   This will not result in any special action on the part of the RFC
+   Editor CSS.  Local CSS files may choose to highlight or otherwise
+   emphasize keywords identified with this tag.
+
+7.4.  .country-name
+
+7.5.  .cref
+
+   For I-Ds only; not for RFCs.
+
+
+
+
+
+
+
+
+Flanagan                   Expires May 9, 2015                  [Page 4]
+
+Internet-Draft                     I-D                     November 2014
+
+
+7.6.  .email
+
+7.7.  .eref
+
+7.8.  .locality
+
+7.9.  .olcompact
+
+7.10.  .org
+
+7.11.  .postal-code
+
+7.12.  .published
+
+7.13.  .refcontent
+
+7.14.  .region
+
+7.15.  .rfceditor-remove
+
+   For I-Ds only; not for RFCs.
+
+7.16.  .self-ref
+
+7.17.  .seriesInfo
+
+7.18.  .sourcecode
+
+   Must use a mono-spaced font.
+
+7.19.  .street-address
+
+7.20.  .ulcompact
+
+8.  IANA Considerations
 
    This draft contains no action for IANA
 
-8.  References
-
-8.1.  Normative References
-
-   [draft-iab-styleguide]
-              Flanagan, H. and S. Ginoza, "The RFC Style Guide", draft-
-              iab-styleguide-02 , April 2014.
-
-   [draft-hildebrand-html-rfc]
-              Hildebrand, J. and H. Flanagan, ed, "HyperText Markup
-              Language Request For Comments Format", draft-hildebrand-
-              html-rfc-03 , June 2014.
+9.  Normative References
 
    [HTMLBP]   W3C, "Best Practices for Authoring HTML Current Status",
               n.d., <http://www.w3.org/standards/techs/htmlbp>.
@@ -206,25 +272,26 @@ Internet-Draft                     I-D                    September 2014
    [RFC5741]  Daigle, L., Kolkman, O., and IAB, "RFC Streams, Headers,
               and Boilerplates", RFC 5741, December 2009.
 
-   [RFC6949]  Flanagan, H. and N. Brownlee, "RFC Series Format
-              Requirements and Future Development", RFC 6949, May 2013.
+   [RFC7322]  Flanagan, H. and S. Ginoza, "RFC Style Guide", RFC 7322,
+              September 2014.
 
-8.2.  Informative References
 
-   [XML-ANNOUNCE]
-              Flanagan, H., "Subject: [rfc-i] Direction of the RFC
-              Format Development effort", May 2013, <http://www.rfc-
-              editor.org/pipermail/rfc-interest/2013-May/005584.html>.
+
+Flanagan                   Expires May 9, 2015                  [Page 5]
+
+Internet-Draft                     I-D                     November 2014
+
+
+   [I-D.hildebrand-html-rfc]
+              Hildebrand, J. and H. Flanagan, "HyperText Markup Language
+              Request For Comments Format", draft-hildebrand-html-rfc-04
+              (work in progress), October 2014.
+
+   [I-D.flanagan-rfc-framework]
+              Flanagan, H., "RFC Format Framework", draft-flanagan-rfc-
+              framework-02 (work in progress), October 2014.
 
 Author's Address
-
-
-
-
-Flanagan                 Expires March 14, 2015                 [Page 4]
-
-Internet-Draft                     I-D                    September 2014
-
 
    Heather Flanagan
    RFC Editor
@@ -266,16 +333,4 @@ Internet-Draft                     I-D                    September 2014
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-Flanagan                 Expires March 14, 2015                 [Page 5]
-
+Flanagan                   Expires May 9, 2015                  [Page 6]
