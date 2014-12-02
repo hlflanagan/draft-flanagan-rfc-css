@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                          November 5, 2014
-Expires: May 9, 2015
+Intended status: Informational                          December 2, 2014
+Expires: June 5, 2015
 
 
                        CSS Requirements for RFCs
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 9, 2015.
+   This Internet-Draft will expire on June 5, 2015.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Flanagan                   Expires May 9, 2015                  [Page 1]
+Flanagan                  Expires June 5, 2015                  [Page 1]
 
-Internet-Draft                     I-D                     November 2014
+Internet-Draft                     I-D                     December 2014
 
 
    include Simplified BSD License text as described in Section 4.e of
@@ -72,31 +72,31 @@ Table of Contents
      4.2.  Body  . . . . . . . . . . . . . . . . . . . . . . . . . .   3
      4.3.  Font Choices  . . . . . . . . . . . . . . . . . . . . . .   4
    5.  Printing  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
-   7.  CSS Classes and Attributes  . . . . . . . . . . . . . . . . .   4
-     7.1.  .adr  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     7.2.  .art- . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-       7.2.1.  .art-ascii-art  . . . . . . . . . . . . . . . . . . .   4
-       7.2.2.  .art-svg  . . . . . . . . . . . . . . . . . . . . . .   4
-     7.3.  .artwork  . . . . . . . . . . . . . . . . . . . . . . . .   4
-     7.4.  .bcp14  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     7.5.  .country-name . . . . . . . . . . . . . . . . . . . . . .   4
-     7.6.  .cref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.7.  .email  . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.8.  .eref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.9.  .locality . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.10. .olcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.11. .org  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.12. .postal-code  . . . . . . . . . . . . . . . . . . . . . .   5
-     7.13. .published  . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.14. .refcontent . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.15. .region . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.16. .rfceditor-remove . . . . . . . . . . . . . . . . . . . .   5
-     7.17. .self-ref . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.18. .seriesInfo . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.19. .sourcecode . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.20. .street-address . . . . . . . . . . . . . . . . . . . . .   5
-     7.21. .ulcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
+   6.  CSS Classes and Attributes  . . . . . . . . . . . . . . . . .   4
+     6.1.  .adr  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     6.2.  .art- . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+       6.2.1.  .art-ascii-art  . . . . . . . . . . . . . . . . . . .   4
+       6.2.2.  .art-svg  . . . . . . . . . . . . . . . . . . . . . .   4
+     6.3.  .artwork  . . . . . . . . . . . . . . . . . . . . . . . .   4
+     6.4.  .bcp14  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     6.5.  .country-name . . . . . . . . . . . . . . . . . . . . . .   4
+     6.6.  .cref . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     6.7.  .email  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     6.8.  .eref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.9.  .locality . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.10. .olcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.11. .org  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.12. .postal-code  . . . . . . . . . . . . . . . . . . . . . .   5
+     6.13. .published  . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.14. .refcontent . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.15. .region . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.16. .rfceditor-remove . . . . . . . . . . . . . . . . . . . .   5
+     6.17. .self-ref . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.18. .seriesInfo . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.19. .sourcecode . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.20. .street-address . . . . . . . . . . . . . . . . . . . . .   5
+     6.21. .ulcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
    8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
    9.  Normative References  . . . . . . . . . . . . . . . . . . . .   5
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Flanagan                   Expires May 9, 2015                  [Page 2]
+Flanagan                  Expires June 5, 2015                  [Page 2]
 
-Internet-Draft                     I-D                     November 2014
+Internet-Draft                     I-D                     December 2014
 
 
    (CSS).  This CSS will be embedded in the published HTML, and may be
@@ -155,7 +155,7 @@ Internet-Draft                     I-D                     November 2014
 
    o  ASCII art must be in a fixed-width font
 
-   o  reflow the text as the screen gets smaller and limit max width
+   o  Reflow the text as the screen gets smaller and limit max width
 
    o  Block quotes must be indented
 
@@ -165,55 +165,55 @@ Internet-Draft                     I-D                     November 2014
 
 
 
-Flanagan                   Expires May 9, 2015                  [Page 3]
+Flanagan                  Expires June 5, 2015                  [Page 3]
 
-Internet-Draft                     I-D                     November 2014
+Internet-Draft                     I-D                     December 2014
 
 
 4.3.  Font Choices
 
-   o  default to a font with full Unicode support; must be or include a
+   o  Default to a font with broad Unicode support; must be or include a
       fixed-width font; publicly licensed
 
 5.  Printing
 
    The CSS must include support for a printer-friendly output.
 
-6.  Security Considerations
-
-   Security vulnerabilities can be introduced through the CSS.  How much
-   detail do we need to go into here to say "don't do foolish things and
-   introduce security issues?"
-
-7.  CSS Classes and Attributes
+6.  CSS Classes and Attributes
 
    This section describes the CSS classes specific to RFCs.  Basic
    selectors are not described.
 
-7.1.  .adr
+6.1.  .adr
 
-7.2.  .art-
+6.2.  .art-
 
    These classes will mostly be styled as part of .artwork.  Specific
    classes may include '.art-ascii-art' and '.art-svg'.
 
-7.2.1.  .art-ascii-art
+6.2.1.  .art-ascii-art
 
    Must use a mono-spaced font.
 
-7.2.2.  .art-svg
+6.2.2.  .art-svg
 
-7.3.  .artwork
+6.3.  .artwork
 
    To float, or not to float?
 
-7.4.  .bcp14
+6.4.  .bcp14
 
    This will not result in any special action on the part of the RFC
    Editor CSS.  Local CSS files may choose to highlight or otherwise
    emphasize keywords identified with this tag.
 
-7.5.  .country-name
+6.5.  .country-name
+
+6.6.  .cref
+
+   For I-Ds only; not for RFCs.
+
+6.7.  .email
 
 
 
@@ -221,48 +221,48 @@ Internet-Draft                     I-D                     November 2014
 
 
 
-Flanagan                   Expires May 9, 2015                  [Page 4]
+Flanagan                  Expires June 5, 2015                  [Page 4]
 
-Internet-Draft                     I-D                     November 2014
+Internet-Draft                     I-D                     December 2014
 
 
-7.6.  .cref
+6.8.  .eref
 
-   For I-Ds only; not for RFCs.
+6.9.  .locality
 
-7.7.  .email
+6.10.  .olcompact
 
-7.8.  .eref
+6.11.  .org
 
-7.9.  .locality
+6.12.  .postal-code
 
-7.10.  .olcompact
+6.13.  .published
 
-7.11.  .org
+6.14.  .refcontent
 
-7.12.  .postal-code
+6.15.  .region
 
-7.13.  .published
-
-7.14.  .refcontent
-
-7.15.  .region
-
-7.16.  .rfceditor-remove
+6.16.  .rfceditor-remove
 
    For I-Ds only; not for RFCs.
 
-7.17.  .self-ref
+6.17.  .self-ref
 
-7.18.  .seriesInfo
+6.18.  .seriesInfo
 
-7.19.  .sourcecode
+6.19.  .sourcecode
 
    Must use a mono-spaced font.
 
-7.20.  .street-address
+6.20.  .street-address
 
-7.21.  .ulcompact
+6.21.  .ulcompact
+
+7.  Security Considerations
+
+   Security vulnerabilities can be introduced through the CSS.  How much
+   detail do we need to go into here to say "don't do foolish things and
+   introduce security issues?"
 
 8.  IANA Considerations
 
@@ -277,9 +277,9 @@ Internet-Draft                     I-D                     November 2014
 
 
 
-Flanagan                   Expires May 9, 2015                  [Page 5]
+Flanagan                  Expires June 5, 2015                  [Page 5]
 
-Internet-Draft                     I-D                     November 2014
+Internet-Draft                     I-D                     December 2014
 
 
    [RFC5741]  Daigle, L., Kolkman, O., and IAB, "RFC Streams, Headers,
@@ -333,4 +333,4 @@ Author's Address
 
 
 
-Flanagan                   Expires May 9, 2015                  [Page 6]
+Flanagan                  Expires June 5, 2015                  [Page 6]
