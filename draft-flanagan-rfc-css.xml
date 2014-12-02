@@ -5,7 +5,7 @@
 <!ENTITY RFC5741 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5741.xml">
 <!ENTITY RFC7322 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7322.xml">
 <!ENTITY I-D.hildebrand-html-rfc SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.hildebrand-html-rfc.xml">
-<!ENTITY I-D.flanagan-rfc-framework SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.I-D.flanagan-rfc-framework.xml">
+<!ENTITY I-D.flanagan-rfc-framework SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.flanagan-rfc-framework.xml">
 ]>
 
 <rfc ipr="trust200902" docName="draft-flanagan-rfc-css-00" category="info">
@@ -25,7 +25,7 @@
       </address>
     </author>
 
-    <date year="2014" month="November" day="5"/>
+    <date year="2014" month="December" day="2"/>
 
     
     
@@ -84,7 +84,7 @@
 <t><list style='symbols'>
   <t>Examples and code blocks must be in a fixed-width font</t>
   <t>ASCII art must be in a fixed-width font</t>
-  <t>reflow the text as the screen gets smaller and limit max width </t>
+  <t>Reflow the text as the screen gets smaller and limit max width </t>
   <t>Block quotes must be indented </t>
   <t>Tables must allow for distinct header rows</t>
   <t>Paragraphs should include a hover-over paragraph identifier</t>
@@ -94,7 +94,7 @@
 <section anchor="font-choices" title="Font Choices">
 
 <t><list style='symbols'>
-  <t>default to a font with full Unicode support; must be or include a fixed-width font; publicly licensed</t>
+  <t>Default to a font with broad Unicode support; must be or include a fixed-width font; publicly licensed</t>
 </list></t>
 
 </section>
@@ -104,12 +104,6 @@
 <t>The CSS must include support for a printer-friendly output.</t>
 
 </section>
-<section anchor="security-considerations" title="Security Considerations">
-
-<t>Security vulnerabilities can be introduced through the CSS.  How much detail do we need to go into here to say "don't do foolish things and introduce security issues?"</t>
-
-</section>
-
 <section anchor="css-classes" title="CSS Classes and Attributes">
 <t>This section describes the CSS classes specific to RFCs.  Basic
    selectors are not described.</t>
@@ -191,6 +185,13 @@
 
   <section anchor="ulcompact" title=".ulcompact">
   </section>
+</section>
+
+
+<section anchor="security-considerations" title="Security Considerations">
+
+<t>Security vulnerabilities can be introduced through the CSS.  How much detail do we need to go into here to say "don't do foolish things and introduce security issues?"</t>
+
 </section>
 
 <section anchor="iana-considerations" title="IANA Considerations">
