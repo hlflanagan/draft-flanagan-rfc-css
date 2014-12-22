@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                          December 2, 2014
-Expires: June 5, 2015
+Intended status: Informational                         December 22, 2014
+Expires: June 25, 2015
 
 
                        CSS Requirements for RFCs
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on June 5, 2015.
+   This Internet-Draft will expire on June 25, 2015.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Flanagan                  Expires June 5, 2015                  [Page 1]
+Flanagan                  Expires June 25, 2015                 [Page 1]
 
 Internet-Draft                     I-D                     December 2014
 
@@ -65,7 +65,7 @@ Internet-Draft                     I-D                     December 2014
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  Design Goals  . . . . . . . . . . . . . . . . . . . . . . . .   3
+   2.  Design Goal . . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  General Requirements  . . . . . . . . . . . . . . . . . . . .   3
    4.  Page Layout . . . . . . . . . . . . . . . . . . . . . . . . .   3
      4.1.  Title Page Header . . . . . . . . . . . . . . . . . . . .   3
@@ -78,10 +78,10 @@ Table of Contents
        6.2.1.  .art-ascii-art  . . . . . . . . . . . . . . . . . . .   4
        6.2.2.  .art-svg  . . . . . . . . . . . . . . . . . . . . . .   4
      6.3.  .artwork  . . . . . . . . . . . . . . . . . . . . . . . .   4
-     6.4.  .bcp14  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     6.5.  .country-name . . . . . . . . . . . . . . . . . . . . . .   4
-     6.6.  .cref . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     6.7.  .email  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     6.4.  .bcp14  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.5.  .country-name . . . . . . . . . . . . . . . . . . . . . .   5
+     6.6.  .cref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.7.  .email  . . . . . . . . . . . . . . . . . . . . . . . . .   5
      6.8.  .eref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
      6.9.  .locality . . . . . . . . . . . . . . . . . . . . . . . .   5
      6.10. .olcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
@@ -94,37 +94,39 @@ Table of Contents
      6.17. .self-ref . . . . . . . . . . . . . . . . . . . . . . . .   5
      6.18. .seriesInfo . . . . . . . . . . . . . . . . . . . . . . .   5
      6.19. .sourcecode . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.20. .street-address . . . . . . . . . . . . . . . . . . . . .   5
-     6.21. .ulcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
-   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
-   9.  Normative References  . . . . . . . . . . . . . . . . . . . .   5
+     6.20. .street-address . . . . . . . . . . . . . . . . . . . . .   6
+     6.21. .ulcompact  . . . . . . . . . . . . . . . . . . . . . . .   6
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
+   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
+   9.  Normative References  . . . . . . . . . . . . . . . . . . . .   6
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
    The HTML format for RFCs, described in [I-D.hildebrand-html-rfc]
    assigns style guidance to an RFC Editor-defined Cascading Style Sheet
+   (CSS).  This CSS will be embedded in the published HTML, and may be
 
 
 
-
-Flanagan                  Expires June 5, 2015                  [Page 2]
+Flanagan                  Expires June 25, 2015                 [Page 2]
 
 Internet-Draft                     I-D                     December 2014
 
 
-   (CSS).  This CSS will be embedded in the published HTML, and may be
-   overridden by a locally defined CSS as desired.
+   overridden by a locally defined CSS as desired.  The embedded,
+   default CSS as included by the RFC Editor is expected to take into
+   account accessibility needs and be built along a responsive design
+   model.
 
    This document describes the requirements for the default CSS used by
    the RFC Editor.  The requirements will only be applied to HTML
    documents published as per [I-D.flanagan-rfc-framework].
 
-2.  Design Goals
+2.  Design Goal
 
-   Looking for content that is adaptable to a wide variety of devices
-   and displays, accessible to assisted readers, and printable.
+   RFCs must be adaptable to a wide variety of devices and displays,
+   accessible to assisted readers, and printable.
 
 3.  General Requirements
 
@@ -161,23 +163,37 @@ Internet-Draft                     I-D                     December 2014
 
    o  Tables must allow for distinct header rows
 
-   o  Paragraphs should include a hover-over paragraph identifier
 
 
-
-Flanagan                  Expires June 5, 2015                  [Page 3]
+Flanagan                  Expires June 25, 2015                 [Page 3]
 
 Internet-Draft                     I-D                     December 2014
 
 
+   o  Paragraphs should include a hover-over paragraph identifier
+
 4.3.  Font Choices
 
-   o  Default to a font with broad Unicode support; must be or include a
-      fixed-width font; publicly licensed
+   o  Default to a sans-serif font family with broad Unicode support for
+      web browser viewing.
+
+   o  Default to a serif font family with broad Unicode support for
+      printing.
+
+   o  A fixed-width font must be used for code and artwork-tagged
+      sections.
+
+   o  All fonts should be publicly licensed and supported by all major
+      web browsers.
+
+   o  Further specification regarding font families TBD
 
 5.  Printing
 
-   The CSS must include support for a printer-friendly output.
+   The CSS must include support for a printer-friendly output.  The
+   print rules should be a part of the embedded style sheet; consumers
+   of an RFC may develop their own print-specific style sheet as
+   desired.
 
 6.  CSS Classes and Attributes
 
@@ -201,6 +217,15 @@ Internet-Draft                     I-D                     December 2014
 
    To float, or not to float?
 
+
+
+
+
+Flanagan                  Expires June 25, 2015                 [Page 4]
+
+Internet-Draft                     I-D                     December 2014
+
+
 6.4.  .bcp14
 
    This will not result in any special action on the part of the RFC
@@ -211,20 +236,11 @@ Internet-Draft                     I-D                     December 2014
 
 6.6.  .cref
 
+   A comment within an I-D; should be visually distinct.
+
    For I-Ds only; not for RFCs.
 
 6.7.  .email
-
-
-
-
-
-
-
-Flanagan                  Expires June 5, 2015                  [Page 4]
-
-Internet-Draft                     I-D                     December 2014
-
 
 6.8.  .eref
 
@@ -244,6 +260,9 @@ Internet-Draft                     I-D                     December 2014
 
 6.16.  .rfceditor-remove
 
+   A note to be added after the standard boilerplage.  Make visually
+   distinct to highlight final removal of the note by the RFC Editor.
+
    For I-Ds only; not for RFCs.
 
 6.17.  .self-ref
@@ -253,6 +272,15 @@ Internet-Draft                     I-D                     December 2014
 6.19.  .sourcecode
 
    Must use a mono-spaced font.
+
+
+
+
+
+Flanagan                  Expires June 25, 2015                 [Page 5]
+
+Internet-Draft                     I-D                     December 2014
+
 
 6.20.  .street-address
 
@@ -272,15 +300,6 @@ Internet-Draft                     I-D                     December 2014
 
    [HTMLBP]   W3C, "Best Practices for Authoring HTML Current Status",
               n.d., <http://www.w3.org/standards/techs/htmlbp>.
-
-
-
-
-
-Flanagan                  Expires June 5, 2015                  [Page 5]
-
-Internet-Draft                     I-D                     December 2014
-
 
    [RFC5741]  Daigle, L., Kolkman, O., and IAB, "RFC Streams, Headers,
               and Boilerplates", RFC 5741, December 2009.
@@ -314,23 +333,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Flanagan                  Expires June 5, 2015                  [Page 6]
+Flanagan                  Expires June 25, 2015                 [Page 6]

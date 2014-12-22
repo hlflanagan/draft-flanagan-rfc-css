@@ -25,7 +25,7 @@
       </address>
     </author>
 
-    <date year="2014" month="December" day="2"/>
+    <date year="2014" month="December" day="22"/>
 
     
     
@@ -34,7 +34,9 @@
     <abstract>
 
 
-<t>While individuals may choose their own Cascading Style Sheet for presenting HTML-formatted RFCs, the default offered by the RFC Editor must meet certain requirements.  This draft describes those requirements.</t>
+<t>While individuals may choose their own Cascading Style Sheet for presenting
+ HTML-formatted RFCs, the default offered by the RFC Editor must meet certain 
+requirements.  This draft describes those requirements.</t>
 
 <t>Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.</t>
 
@@ -50,14 +52,14 @@
 
 <section anchor="introduction" title="Introduction">
 
-<t>The HTML format for RFCs, described in <xref target="I-D.hildebrand-html-rfc"/> assigns style guidance to an RFC Editor-defined Cascading Style Sheet (CSS).  This CSS will be embedded in the published HTML, and may be overridden by a locally defined CSS as desired.</t>
+<t>The HTML format for RFCs, described in <xref target="I-D.hildebrand-html-rfc"/> assigns style guidance to an RFC Editor-defined Cascading Style Sheet (CSS).  This CSS will be embedded in the published HTML, and may be overridden by a locally defined CSS as desired.  The embedded, default CSS as included by the RFC Editor is expected to take into account accessibility needs and be built along a responsive design model.</t>
 
 <t>This document describes the requirements for the default CSS used by the RFC Editor.  The requirements will only be applied to HTML documents published as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
 
 </section>
-<section anchor="design-goals" title="Design Goals">
+<section anchor="design-goals" title="Design Goal">
 
-<t>Looking for content that is adaptable to a wide variety of devices and displays, accessible to assisted readers, and printable.</t>
+<t>RFCs must be adaptable to a wide variety of devices and displays, accessible to assisted readers, and printable.</t>
 
 </section>
 <section anchor="general-requirements" title="General Requirements">
@@ -94,14 +96,18 @@
 <section anchor="font-choices" title="Font Choices">
 
 <t><list style='symbols'>
-  <t>Default to a font with broad Unicode support; must be or include a fixed-width font; publicly licensed</t>
+  <t>Default to a sans-serif font family with broad Unicode support for web browser viewing.</t>
+  <t>Default to a serif font family with broad Unicode support for printing.</t>
+  <t>A fixed-width font must be used for code and artwork-tagged sections.</t>
+  <t>All fonts should be publicly licensed and supported by all major web browsers.</t>
+  <t>Further specification regarding font families TBD</t>
 </list></t>
 
 </section>
 </section>
 <section anchor="printing" title="Printing">
 
-<t>The CSS must include support for a printer-friendly output.</t>
+<t>The CSS must include support for a printer-friendly output.  The print rules should be a part of the embedded style sheet; consumers of an RFC may develop their own print-specific style sheet as desired.</t>
 
 </section>
 <section anchor="css-classes" title="CSS Classes and Attributes">
@@ -116,7 +122,7 @@
   classes may include '.art-ascii-art' and '.art-svg'.</t>
 
     <section anchor="art-ascii-art" title=".art-ascii-art">
-    <t>Must use a mono-spaced font.  </t>
+    <t>Must use a mono-spaced font.</t>
     </section>
 
     <section anchor="art-svg" title=".art-svg">
@@ -136,6 +142,7 @@
   </section>
 
   <section anchor="cref" title=".cref">
+  <t>A comment within an I-D; should be visually distinct.</t>
   <t>For I-Ds only; not for RFCs.</t>
   </section>
 
@@ -167,6 +174,7 @@
   </section>
 
   <section anchor="rfceditor-remove" title=".rfceditor-remove">
+  <t>A note to be added after the standard boilerplage.  Make visually distinct to highlight final removal of the note by the RFC Editor.</t>
   <t>For I-Ds only; not for RFCs.</t>
   </section>
 
