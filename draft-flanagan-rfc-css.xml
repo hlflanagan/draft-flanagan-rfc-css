@@ -18,23 +18,21 @@
     <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
       <organization>RFC Editor</organization>
       <address>
-        
-        
         <email>rse@rfc-editor.org</email>
-        
+        <uri>http://orcid.org/0000-0002-2647-2220</uri> 
       </address>
     </author>
 
-    <date year="2014" month="December" day="2"/>
-
-    
-    
+    <date year="2015" month="June" day="21"/>
     
 
     <abstract>
 
 
-<t>While individuals may choose their own Cascading Style Sheet for presenting HTML-formatted RFCs, the default offered by the RFC Editor must meet certain requirements.  This draft describes those requirements.</t>
+<t>While individuals may choose their own Cascading Style Sheet for presenting
+ HTML-formatted RFCs, the default offered by the RFC Editor must meet certain 
+requirements.  This draft describes those requirements and is based on the 
+classes defined in draft-hildebrand-html-rfc.</t>
 
 <t>Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.</t>
 
@@ -50,14 +48,14 @@
 
 <section anchor="introduction" title="Introduction">
 
-<t>The HTML format for RFCs, described in <xref target="I-D.hildebrand-html-rfc"/> assigns style guidance to an RFC Editor-defined Cascading Style Sheet (CSS).  This CSS will be embedded in the published HTML, and may be overridden by a locally defined CSS as desired.</t>
+<t>The HTML format for RFCs, described in <xref target="I-D.hildebrand-html-rfc"/> assigns style guidance to an RFC Editor-defined Cascading Style Sheet (CSS).  This CSS will be embedded in the published HTML, and may be overridden by a locally defined CSS as desired.  The embedded, default CSS as included by the RFC Editor is expected to take into account accessibility needs and be built along a responsive design model.</t>
 
-<t>This document describes the requirements for the default CSS used by the RFC Editor.  The requirements will only be applied to HTML documents published as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
+<t>This document describes the requirements for the default CSS used by the RFC Editor.  The requirements will only be applied to HTML documents published by the RFC Editor as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
 
 </section>
-<section anchor="design-goals" title="Design Goals">
+<section anchor="design-goals" title="Design Goal">
 
-<t>Looking for content that is adaptable to a wide variety of devices and displays, accessible to assisted readers, and printable.</t>
+<t>RFCs must be adaptable to a wide variety of devices and displays, accessible to assisted readers, and printable.</t>
 
 </section>
 <section anchor="general-requirements" title="General Requirements">
@@ -94,14 +92,18 @@
 <section anchor="font-choices" title="Font Choices">
 
 <t><list style='symbols'>
-  <t>Default to a font with broad Unicode support; must be or include a fixed-width font; publicly licensed</t>
+  <t>Default to a sans-serif font family with broad Unicode support for web browser viewing.</t>
+  <t>Default to a serif font family with broad Unicode support for printing.</t>
+  <t>A fixed-width font must be used for code and artwork-tagged sections.</t>
+  <t>All fonts should be publicly licensed and supported by all major web browsers.</t>
+  <t>Further specification regarding font families TBD</t>
 </list></t>
 
 </section>
 </section>
 <section anchor="printing" title="Printing">
 
-<t>The CSS must include support for a printer-friendly output.</t>
+<t>The CSS must include support for a printer-friendly output.  The print rules should be a part of the embedded style sheet; consumers of an RFC may develop their own print-specific style sheet as desired.</t>
 
 </section>
 <section anchor="css-classes" title="CSS Classes and Attributes">
@@ -109,14 +111,22 @@
    selectors are not described.</t>
 
   <section anchor="adr" title=".adr">
+    <t>No visible changes to the text.</t>
   </section>
 
-  <section anchor="art-" title=".art-">
+  <section anchor="annotation" title=".annotation">
+  </section>
+
+  <section anchor="artwork" title=".artwork">
   <t>These classes will mostly be styled as part of .artwork.  Specific
-  classes may include '.art-ascii-art' and '.art-svg'.</t>
+  classes may include '.art-ascii-art' and '.art-svg'. [HF: TBD - floating or 
+  not.</t>
 
     <section anchor="art-ascii-art" title=".art-ascii-art">
-    <t>Must use a mono-spaced font.  </t>
+    <t>Must use a mono-spaced font.</t>
+    </section>
+
+    <section anchor="art-logo" title=".art-logo">
     </section>
 
     <section anchor="art-svg" title=".art-svg">
@@ -124,67 +134,178 @@
 
   </section>
 
-  <section anchor="artwork" title=".artwork">
-  <t>To float, or not to float?</t>
+  <section anchor="ascii" title=".ascii">
+  </section>
+
+  <section anchor="author" title=".author">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="bcp14" title=".bcp14">
   <t>This will not result in any special action on the part of the RFC Editor CSS. Local CSS files may choose to highlight or otherwise emphasize keywords identified with this tag.</t>
   </section>
 
+  <section anchor="city" title=".city">
+    <t>No visible changes to the text.</t>
+  </section>
+
+  <section anchor="code" title=".code">
+  </section>
+
+  <section anchor="comma" title=".comma">
+    <t>No visible changes to the text.</t>
+  </section>
+
   <section anchor="country-name" title=".country-name">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="cref" title=".cref">
-  <t>For I-Ds only; not for RFCs.</t>
+    <t>A comment within an I-D; should be visually distinct.</t>
+    <t>For I-Ds only; not for RFCs.</t>
+  </section>
+
+  <section anchor="cref-source" title=".cref-source">
+  </section>
+
+  <section anchor="dlparallel" title=".dlparallel">
+  </section>
+
+  <section anchor="dlcompact" title=".dlcompact">
+  </section>
+
+  <section anchor="docinfo" title=".docinfo">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="email" title=".email">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="eref" title=".eref">
   </section>
+
+  <section anchor="index" title=".index">
+  </section>
+
+  <section anchor="indexChar" title=".indexChar">
+  </section>
+
+  <section anchor="indexComma" title=".indexComma">
+  </section>
+
+  <section anchor="indexIndex" title=".indexIndex">
+  </section>
+
+  <section anchor="indexItem" title=".indexItem">
+  </section>
+
+  <section anchor="indexPrimary" title=".indexPrimary">
+  </section>
+
+  <section anchor="indexSubItem" title="indexSubItem">
+  </section>
+
+  <section anchor="initial" title=".initial">
+    <t>No visible changes to the text.</t>
+  </section>
+
+  <section anchor="iref" title=".iref">
+  </section>
  
+  <section anchor="irefItem" title=".irefItem">
+  </section>
+ 
+  <section anchor="irefRefs" title=".irefRefs">
+  </section>
+
+  <section anchor="irefSubItem" title=".irefSubItem">
+  </section>
+
   <section anchor="locality" title=".locality">
+    <t>No visible changes to the text.</t>
   </section>
  
   <section anchor="olcompact" title=".olcompact">
   </section>
 
   <section anchor="org" title=".org">
+    <t>No visible changes to the text.</t>
+  </section>
+
+  <section anchor="organization" title=".organization">
+    <t>No visible changes to the text.</t>
+  </section>
+
+  <section anchor="pilcrow" title=".pilcrow">
+    <t>Pilcrows, when used as described in draft-hildebrand-html-rfc, should 
+       appear at the end of the paragraph, artwork, or sourcecode segment.</t>
   </section>
 
   <section anchor="postal-code" title=".postal-code">
+    <t>No visible changes to the text.</t>
   </section>
  
   <section anchor="published" title=".published">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="refcontent" title=".refcontent">
   </section>
 
   <section anchor="region" title=".region">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="rfceditor-remove" title=".rfceditor-remove">
+  <t>A note to be added after the standard boilerplage.  Make visually distinct to highlight final removal of the note by the RFC Editor.</t>
   <t>For I-Ds only; not for RFCs.</t>
   </section>
 
   <section anchor="self-ref" title=".self-ref">
   </section>
 
+  <section anchor="series" title=".series">
+    <t>No visible changes to the text.</t>
+  </section>
+
   <section anchor="seriesInfo" title=".seriesInfo">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="sourcecode" title=".sourcecode">
   <t>Must use a mono-spaced font.</t>
   </section>
 
+  <section anchor="status" title=".status">
+    <t>No visible changes to the text.</t>
+  </section>
+
   <section anchor="street-address" title=".street-address">
+    <t>No visible changes to the text.</t>
+  </section>
+
+  <section anchor="tel" title=".tel">
+    <t>No visible changes to the text.</t>
+  </section>
+
+  <section anchor="toc" title=".toc">
+  </section>
+
+  <section anchor="type" title=".type">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="ulcompact" title=".ulcompact">
   </section>
+
+  <section anchor="url" title=".url">
+  </section>
+
+  <section anchor="workgroup" title=".workgroup">
+    <t>No visible changes to the text.</t>
+  </section>
+
 </section>
 
 
