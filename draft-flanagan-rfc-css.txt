@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                         December 22, 2014
-Expires: June 25, 2015
+Intended status: Informational                             June 21, 2015
+Expires: December 23, 2015
 
 
                        CSS Requirements for RFCs
@@ -16,7 +16,8 @@ Abstract
    While individuals may choose their own Cascading Style Sheet for
    presenting HTML-formatted RFCs, the default offered by the RFC Editor
    must meet certain requirements.  This draft describes those
-   requirements.
+   requirements and is based on the classes defined in draft-hildebrand-
+   html-rfc.
 
    Discussion of this draft takes place on the rfc-interest mailing list
    (rfc-interest@rfc-editor.org), which has its home page at
@@ -37,11 +38,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on June 25, 2015.
+   This Internet-Draft will expire on December 23, 2015.
 
 Copyright Notice
 
-   Copyright (c) 2014 IETF Trust and the persons identified as the
+   Copyright (c) 2015 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -49,71 +50,102 @@ Copyright Notice
    (http://trustee.ietf.org/license-info) in effect on the date of
    publication of this document.  Please review these documents
    carefully, as they describe your rights and restrictions with respect
-   to this document.  Code Components extracted from this document must
 
 
 
-Flanagan                  Expires June 25, 2015                 [Page 1]
+Flanagan                Expires December 23, 2015               [Page 1]
 
-Internet-Draft                     I-D                     December 2014
+Internet-Draft                     I-D                         June 2015
 
 
+   to this document.  Code Components extracted from this document must
    include Simplified BSD License text as described in Section 4.e of
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
 Table of Contents
 
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
    2.  Design Goal . . . . . . . . . . . . . . . . . . . . . . . . .   3
-   3.  General Requirements  . . . . . . . . . . . . . . . . . . . .   3
-   4.  Page Layout . . . . . . . . . . . . . . . . . . . . . . . . .   3
-     4.1.  Title Page Header . . . . . . . . . . . . . . . . . . . .   3
-     4.2.  Body  . . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  General Requirements  . . . . . . . . . . . . . . . . . . . .   4
+   4.  Page Layout . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     4.1.  Title Page Header . . . . . . . . . . . . . . . . . . . .   4
+     4.2.  Body  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
      4.3.  Font Choices  . . . . . . . . . . . . . . . . . . . . . .   4
-   5.  Printing  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-   6.  CSS Classes and Attributes  . . . . . . . . . . . . . . . . .   4
-     6.1.  .adr  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     6.2.  .art- . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-       6.2.1.  .art-ascii-art  . . . . . . . . . . . . . . . . . . .   4
-       6.2.2.  .art-svg  . . . . . . . . . . . . . . . . . . . . . .   4
-     6.3.  .artwork  . . . . . . . . . . . . . . . . . . . . . . . .   4
-     6.4.  .bcp14  . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.5.  .country-name . . . . . . . . . . . . . . . . . . . . . .   5
-     6.6.  .cref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.7.  .email  . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.8.  .eref . . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.9.  .locality . . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.10. .olcompact  . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.11. .org  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.12. .postal-code  . . . . . . . . . . . . . . . . . . . . . .   5
-     6.13. .published  . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.14. .refcontent . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.15. .region . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.16. .rfceditor-remove . . . . . . . . . . . . . . . . . . . .   5
-     6.17. .self-ref . . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.18. .seriesInfo . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.19. .sourcecode . . . . . . . . . . . . . . . . . . . . . . .   5
-     6.20. .street-address . . . . . . . . . . . . . . . . . . . . .   6
-     6.21. .ulcompact  . . . . . . . . . . . . . . . . . . . . . . .   6
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
-   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
-   9.  Normative References  . . . . . . . . . . . . . . . . . . . .   6
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
+   5.  Printing  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+   6.  CSS Classes and Attributes  . . . . . . . . . . . . . . . . .   5
+     6.1.  .adr  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.2.  .annotation . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.3.  .artwork  . . . . . . . . . . . . . . . . . . . . . . . .   5
+       6.3.1.  .art-ascii-art  . . . . . . . . . . . . . . . . . . .   5
+       6.3.2.  .art-logo . . . . . . . . . . . . . . . . . . . . . .   5
+       6.3.3.  .art-svg  . . . . . . . . . . . . . . . . . . . . . .   5
+     6.4.  .ascii  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.5.  .author . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.6.  .bcp14  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.7.  .city . . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.8.  .code . . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.9.  .comma  . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.10. .country-name . . . . . . . . . . . . . . . . . . . . . .   6
+     6.11. .cref . . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.12. .cref-source  . . . . . . . . . . . . . . . . . . . . . .   6
+     6.13. .dlparallel . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.14. .dlcompact  . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.15. .docinfo  . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.16. .email  . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.17. .eref . . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.18. .index  . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.19. .indexChar  . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.20. .indexComma . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.21. .indexIndex . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.22. .indexItem  . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.23. .indexPrimary . . . . . . . . . . . . . . . . . . . . . .   7
+     6.24. indexSubItem  . . . . . . . . . . . . . . . . . . . . . .   7
+     6.25. .initial  . . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.26. .iref . . . . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.27. .irefItem . . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.28. .irefRefs . . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.29. .irefSubItem  . . . . . . . . . . . . . . . . . . . . . .   7
+
+
+
+Flanagan                Expires December 23, 2015               [Page 2]
+
+Internet-Draft                     I-D                         June 2015
+
+
+     6.30. .locality . . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.31. .olcompact  . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.32. .org  . . . . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.33. .organization . . . . . . . . . . . . . . . . . . . . . .   7
+     6.34. .pilcrow  . . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.35. .postal-code  . . . . . . . . . . . . . . . . . . . . . .   7
+     6.36. .published  . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.37. .refcontent . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.38. .region . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.39. .rfceditor-remove . . . . . . . . . . . . . . . . . . . .   8
+     6.40. .self-ref . . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.41. .series . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.42. .seriesInfo . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.43. .sourcecode . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.44. .status . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.45. .street-address . . . . . . . . . . . . . . . . . . . . .   8
+     6.46. .tel  . . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.47. .toc  . . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.48. .type . . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.49. .ulcompact  . . . . . . . . . . . . . . . . . . . . . . .   9
+     6.50. .url  . . . . . . . . . . . . . . . . . . . . . . . . . .   9
+     6.51. .workgroup  . . . . . . . . . . . . . . . . . . . . . . .   9
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   9
+   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   9
+   9.  Normative References  . . . . . . . . . . . . . . . . . . . .   9
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   9
 
 1.  Introduction
 
    The HTML format for RFCs, described in [I-D.hildebrand-html-rfc]
    assigns style guidance to an RFC Editor-defined Cascading Style Sheet
    (CSS).  This CSS will be embedded in the published HTML, and may be
-
-
-
-Flanagan                  Expires June 25, 2015                 [Page 2]
-
-Internet-Draft                     I-D                     December 2014
-
-
    overridden by a locally defined CSS as desired.  The embedded,
    default CSS as included by the RFC Editor is expected to take into
    account accessibility needs and be built along a responsive design
@@ -121,12 +153,22 @@ Internet-Draft                     I-D                     December 2014
 
    This document describes the requirements for the default CSS used by
    the RFC Editor.  The requirements will only be applied to HTML
-   documents published as per [I-D.flanagan-rfc-framework].
+   documents published by the RFC Editor as per
+   [I-D.flanagan-rfc-framework].
 
 2.  Design Goal
 
    RFCs must be adaptable to a wide variety of devices and displays,
    accessible to assisted readers, and printable.
+
+
+
+
+
+Flanagan                Expires December 23, 2015               [Page 3]
+
+Internet-Draft                     I-D                         June 2015
+
 
 3.  General Requirements
 
@@ -163,13 +205,6 @@ Internet-Draft                     I-D                     December 2014
 
    o  Tables must allow for distinct header rows
 
-
-
-Flanagan                  Expires June 25, 2015                 [Page 3]
-
-Internet-Draft                     I-D                     December 2014
-
-
    o  Paragraphs should include a hover-over paragraph identifier
 
 4.3.  Font Choices
@@ -182,6 +217,14 @@ Internet-Draft                     I-D                     December 2014
 
    o  A fixed-width font must be used for code and artwork-tagged
       sections.
+
+
+
+
+Flanagan                Expires December 23, 2015               [Page 4]
+
+Internet-Draft                     I-D                         June 2015
+
 
    o  All fonts should be publicly licensed and supported by all major
       web browsers.
@@ -202,89 +245,218 @@ Internet-Draft                     I-D                     December 2014
 
 6.1.  .adr
 
-6.2.  .art-
+   No visible changes to the text.
 
-   These classes will mostly be styled as part of .artwork.  Specific
-   classes may include '.art-ascii-art' and '.art-svg'.
-
-6.2.1.  .art-ascii-art
-
-   Must use a mono-spaced font.
-
-6.2.2.  .art-svg
+6.2.  .annotation
 
 6.3.  .artwork
 
-   To float, or not to float?
+   These classes will mostly be styled as part of .artwork.  Specific
+   classes may include '.art-ascii-art' and '.art-svg'.  [HF: TBD -
+   floating or not.
 
+6.3.1.  .art-ascii-art
 
+   Must use a mono-spaced font.
 
+6.3.2.  .art-logo
 
+6.3.3.  .art-svg
 
-Flanagan                  Expires June 25, 2015                 [Page 4]
-
-Internet-Draft                     I-D                     December 2014
+6.4.  .ascii
 
+6.5.  .author
 
-6.4.  .bcp14
+   No visible changes to the text.
+
+6.6.  .bcp14
 
    This will not result in any special action on the part of the RFC
    Editor CSS.  Local CSS files may choose to highlight or otherwise
    emphasize keywords identified with this tag.
 
-6.5.  .country-name
 
-6.6.  .cref
+
+Flanagan                Expires December 23, 2015               [Page 5]
+
+Internet-Draft                     I-D                         June 2015
+
+
+6.7.  .city
+
+   No visible changes to the text.
+
+6.8.  .code
+
+6.9.  .comma
+
+   No visible changes to the text.
+
+6.10.  .country-name
+
+   No visible changes to the text.
+
+6.11.  .cref
 
    A comment within an I-D; should be visually distinct.
 
    For I-Ds only; not for RFCs.
 
-6.7.  .email
+6.12.  .cref-source
 
-6.8.  .eref
+6.13.  .dlparallel
 
-6.9.  .locality
+6.14.  .dlcompact
 
-6.10.  .olcompact
+6.15.  .docinfo
 
-6.11.  .org
+   No visible changes to the text.
 
-6.12.  .postal-code
+6.16.  .email
 
-6.13.  .published
+   No visible changes to the text.
 
-6.14.  .refcontent
+6.17.  .eref
 
-6.15.  .region
+6.18.  .index
 
-6.16.  .rfceditor-remove
+6.19.  .indexChar
+
+6.20.  .indexComma
+
+6.21.  .indexIndex
+
+
+
+
+
+
+
+
+Flanagan                Expires December 23, 2015               [Page 6]
+
+Internet-Draft                     I-D                         June 2015
+
+
+6.22.  .indexItem
+
+6.23.  .indexPrimary
+
+6.24.  indexSubItem
+
+6.25.  .initial
+
+   No visible changes to the text.
+
+6.26.  .iref
+
+6.27.  .irefItem
+
+6.28.  .irefRefs
+
+6.29.  .irefSubItem
+
+6.30.  .locality
+
+   No visible changes to the text.
+
+6.31.  .olcompact
+
+6.32.  .org
+
+   No visible changes to the text.
+
+6.33.  .organization
+
+   No visible changes to the text.
+
+6.34.  .pilcrow
+
+   Pilcrows, when used as described in draft-hildebrand-html-rfc, should
+   appear at the end of the paragraph, artwork, or sourcecode segment.
+
+6.35.  .postal-code
+
+   No visible changes to the text.
+
+6.36.  .published
+
+   No visible changes to the text.
+
+
+
+
+
+
+
+Flanagan                Expires December 23, 2015               [Page 7]
+
+Internet-Draft                     I-D                         June 2015
+
+
+6.37.  .refcontent
+
+6.38.  .region
+
+   No visible changes to the text.
+
+6.39.  .rfceditor-remove
 
    A note to be added after the standard boilerplage.  Make visually
    distinct to highlight final removal of the note by the RFC Editor.
 
    For I-Ds only; not for RFCs.
 
-6.17.  .self-ref
+6.40.  .self-ref
 
-6.18.  .seriesInfo
+6.41.  .series
 
-6.19.  .sourcecode
+   No visible changes to the text.
+
+6.42.  .seriesInfo
+
+   No visible changes to the text.
+
+6.43.  .sourcecode
 
    Must use a mono-spaced font.
 
+6.44.  .status
+
+   No visible changes to the text.
+
+6.45.  .street-address
+
+   No visible changes to the text.
+
+6.46.  .tel
+
+   No visible changes to the text.
+
+6.47.  .toc
+
+6.48.  .type
+
+   No visible changes to the text.
 
 
 
 
-Flanagan                  Expires June 25, 2015                 [Page 5]
+
+
+
+Flanagan                Expires December 23, 2015               [Page 8]
 
-Internet-Draft                     I-D                     December 2014
+Internet-Draft                     I-D                         June 2015
 
 
-6.20.  .street-address
+6.49.  .ulcompact
 
-6.21.  .ulcompact
+6.50.  .url
+
+6.51.  .workgroup
+
+   No visible changes to the text.
 
 7.  Security Considerations
 
@@ -308,13 +480,13 @@ Internet-Draft                     I-D                     December 2014
               September 2014.
 
    [I-D.hildebrand-html-rfc]
-              Hildebrand, J. and H. Flanagan, "HyperText Markup Language
-              Request For Comments Format", draft-hildebrand-html-rfc-04
-              (work in progress), October 2014.
+              Hildebrand, J. and P. Hoffman, "HyperText Markup Language
+              Request For Comments Format", draft-hildebrand-html-rfc-07
+              (work in progress), June 2015.
 
    [I-D.flanagan-rfc-framework]
               Flanagan, H., "RFC Format Framework", draft-flanagan-rfc-
-              framework-02 (work in progress), October 2014.
+              framework-03 (work in progress), January 2015.
 
 Author's Address
 
@@ -322,15 +494,11 @@ Author's Address
    RFC Editor
 
    Email: rse@rfc-editor.org
+   URI:   http://orcid.org/0000-0002-2647-2220
 
 
 
 
 
 
-
-
-
-
-
-Flanagan                  Expires June 25, 2015                 [Page 6]
+Flanagan                Expires December 23, 2015               [Page 9]

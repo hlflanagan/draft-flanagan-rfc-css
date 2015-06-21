@@ -32,7 +32,7 @@
 <t>While individuals may choose their own Cascading Style Sheet for presenting
  HTML-formatted RFCs, the default offered by the RFC Editor must meet certain 
 requirements.  This draft describes those requirements and is based on the 
-classes defined in <draft-hildebrand-html-rfc>.</t>
+classes defined in draft-hildebrand-html-rfc.</t>
 
 <t>Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.</t>
 
@@ -139,7 +139,7 @@ classes defined in <draft-hildebrand-html-rfc>.</t>
 
   <section anchor="author" title=".author">
     <t>No visible changes to the text.</t>
-  <section>
+  </section>
 
   <section anchor="bcp14" title=".bcp14">
   <t>This will not result in any special action on the part of the RFC Editor CSS. Local CSS files may choose to highlight or otherwise emphasize keywords identified with this tag.</t>
@@ -201,17 +201,17 @@ classes defined in <draft-hildebrand-html-rfc>.</t>
   </section>
 
   <section anchor="indexPrimary" title=".indexPrimary">
-  <section>
+  </section>
 
   <section anchor="indexSubItem" title="indexSubItem">
   </section>
 
   <section anchor="initial" title=".initial">
     <t>No visible changes to the text.</t>
-  <section>
+  </section>
 
   <section anchor="iref" title=".iref">
-  <section
+  </section>
  
   <section anchor="irefItem" title=".irefItem">
   </section>
@@ -238,7 +238,7 @@ classes defined in <draft-hildebrand-html-rfc>.</t>
   </section>
 
   <section anchor="pilcrow" title=".pilcrow">
-    <t>Pilcrows, when used as described in <draft-hildebrand-html-rfc>, should 
+    <t>Pilcrows, when used as described in draft-hildebrand-html-rfc, should 
        appear at the end of the paragraph, artwork, or sourcecode segment.</t>
   </section>
 
@@ -279,7 +279,7 @@ classes defined in <draft-hildebrand-html-rfc>.</t>
 
   <section anchor="status" title=".status">
     <t>No visible changes to the text.</t>
-  <section>
+  </section>
 
   <section anchor="street-address" title=".street-address">
     <t>No visible changes to the text.</t>
@@ -304,7 +304,7 @@ classes defined in <draft-hildebrand-html-rfc>.</t>
 
   <section anchor="workgroup" title=".workgroup">
     <t>No visible changes to the text.</t>
-  <section>
+  </section>
 
 </section>
 
