@@ -23,7 +23,7 @@
       </address>
     </author>
 
-    <date year="2015" month="June" day="21"/>
+    <date year="2015" month="June" day="30"/>
     
 
     <abstract>
@@ -115,9 +115,11 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="annotation" title=".annotation">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="anticomma" title=".anticomma">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="artwork" title=".artwork">
@@ -130,14 +132,18 @@ classes defined in draft-hildebrand-html-rfc.</t>
     </section>
 
     <section anchor="art-logo" title=".art-logo">
+    <t>No visible changes to the text. Such images are not currently allowed 
+    in RFCs.</t>
     </section>
 
     <section anchor="art-svg" title=".art-svg">
+    <t>TBD: to allow these images to float in the text?</t>
     </section>
 
   </section>
 
   <section anchor="ascii" title=".ascii">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="author" title=".author">
@@ -157,6 +163,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="code" title=".code">
+    <t>Make visually distinct with a box around the code components.</t>
   </section>
 
   <section anchor="comma" title=".comma">
@@ -176,15 +183,21 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="crefAnchor" title=".crefAnchor">
+    <t>A comment within an I-D; should be visually distinct.</t>
+    <t>For I-Ds only; not for RFCs.</t>
   </section>
 
   <section anchor="cref-source" title=".cref-source">
+    <t>A comment within an I-D; should be visually distinct.</t>
+    <t>For I-Ds only; not for RFCs.</t>
   </section>
 
   <section anchor="dlparallel" title=".dlparallel">
+    <t>TBD</t>
   </section>
 
   <section anchor="dlcompact" title=".dlcompact">
+    <t>TBD</t>
   </section>
 
   <section anchor="docinfo" title=".docinfo">
@@ -196,33 +209,43 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="eref" title=".eref">
+    <t>Standard link formatting (underlined, change in color).</t>
   </section>
 
   <section anchor="finalized" title=".finalized">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="fn" title=".fn">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="index" title=".index">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="indexChar" title=".indexChar">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="indexComma" title=".indexComma">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="indexIndex" title=".indexIndex">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="indexItem" title=".indexItem">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="indexPrimary" title=".indexPrimary">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="indexSubItem" title="indexSubItem">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="initial" title=".initial">
@@ -230,18 +253,23 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="iref" title=".iref">
+    <t>No visible changes to the text.</t>
   </section>
  
   <section anchor="irefItem" title=".irefItem">
+    <t>No visible changes to the text.</t>
   </section>
  
   <section anchor="irefRefs" title=".irefRefs">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="irefSubItem" title=".irefSubItem">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="label" title=".label">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="locality" title=".locality">
@@ -249,6 +277,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
  
   <section anchor="namerole" title=".namerole">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="note" title=".note"> 
@@ -259,9 +288,11 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="olcompact" title=".olcompact">
+    <t>TBD</t>
   </section>
 
   <section anchor="olpercent" title=".olpercent">
+    <t>TBD</t>
   </section>
 
   <section anchor="org" title=".org">
@@ -286,15 +317,19 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="refauthor" title=".refauthor">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="refcontent" title=".refcontent">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="reference" title=".reference">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="referencegroup" title=".referencegroup">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="region" title=".region">
@@ -302,15 +337,19 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="relref" title=".relref">
+    <t>TBD</t>
   </section>
 
   <section anchor="rendered" title=".rendered">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="role" title=".role">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="self-ref" title=".self-ref">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="series" title=".series">
@@ -322,7 +361,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="sourcecode" title=".sourcecode">
-    <t>Must use a mono-spaced font.</t>
+    <t>Same styling as ".code"</t>
     <section anchor="lang-" title=".lang-">
     <t>Example: lang-c</t>
     </section>
@@ -337,6 +376,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="surname" title=".surname">
+    <t>No visible changes to the text.</t>
   </section>
 
   <section anchor="tel" title=".tel">
@@ -344,6 +384,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="toc" title=".toc">
+    <t>Formatting will be required. Details TBD.</t>
   </section>
 
   <section anchor="type" title=".type">
@@ -351,9 +392,11 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="ulcompact" title=".ulcompact">
+    <t>TBD</t>
   </section>
 
   <section anchor="url" title=".url">
+    <t>TBD</t>
   </section>
 
   <section anchor="workgroup" title=".workgroup">
@@ -361,6 +404,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
  
   <section anchor="xref" title=".xref">
+    <t>TBD</t>
   </section>
 
 </section>
