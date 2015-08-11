@@ -52,6 +52,8 @@ classes defined in draft-hildebrand-html-rfc.</t>
 
 <t>This document describes the requirements for the default CSS used by the RFC Editor.  A class is identified for Internet Drafts, such that certain features found only in I-Ds may be made distinct in some fashion within those drafts.  The requirements will only be applied to HTML documents published by the RFC Editor as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
 
+<t>The details described in this document are expected to change based on experience gained in implementing the RFC production center's toolset. Revised documents will be published capturing those changes as the toolset is completed. Other implementers must not expect those changes to remain backwards-compatible with the details described this document.</t>
+
 </section>
 <section anchor="design-goals" title="Design Goal">
 
@@ -428,6 +430,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
 <t>To be removed before publication</t>
 <section anchor="change-01" title="Changes from -00 to -01">
 <t>All sections: changed language from "no visible changes to the text" to "No visible changes to the natural language content; keep in default style."</t>
+<t>Introduction: text regarding expected future changes added.</t>
 <t>Body: added text regarding anchors and tags</t>
 <t>Artwork: clarified non-floating behavior of artwork</t>
 <t>List behavior: clarified the behavior of .ulcompact, .olcompact, and .dlcompact as distinct from default list behavior; clarified behavior of .dlparallel</t>
