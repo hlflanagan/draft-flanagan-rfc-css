@@ -291,7 +291,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="olpercent" title=".olpercent">
-    <t>TBD</t>
+    <t>If the style attribute from the source XML contains a percent sign, a particular style setting will be required to make this setting behave like an HTML ordered list.</t>
   </section>
 
   <section anchor="org" title=".org">
@@ -340,6 +340,10 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="rendered" title=".rendered">
+    <t>No visible changes to the natural language content; keep in default style.</t>
+  </section>
+
+  <section anchor="rfc" title=".RFC">
     <t>No visible changes to the natural language content; keep in default style.</t>
   </section>
 
@@ -431,10 +435,11 @@ classes defined in draft-hildebrand-html-rfc.</t>
 <section anchor="change-01" title="Changes from -00 to -01">
 <t>All sections: changed language from "no visible changes to the text" to "No visible changes to the natural language content; keep in default style."</t>
 <t>Introduction: text regarding expected future changes added.</t>
-<t>Body: added text regarding anchors and tags</t>
+<t>Body: added text regarding anchors and tags; this text also applied to .relref, .url, .xref</t>
 <t>Artwork: clarified non-floating behavior of artwork</t>
 <t>List behavior: clarified the behavior of .ulcompact, .olcompact, and .dlcompact as distinct from default list behavior; clarified behavior of .dlparallel</t>
 <t>Note: clarified text around behavior of notes</t>
+<t>RFC: added additional class to allow the CSS to distinguish between RFCs and Internet Drafts if desired</t>
 <t>TOC: clarified text around behavior of table of contents</t>
 </section>
 </section>
