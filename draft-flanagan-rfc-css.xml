@@ -154,8 +154,16 @@ classes defined in draft-hildebrand-html-rfc.</t>
     <t>Use less spacing on a definition list than the default.</t>
   </section>
 
+  <section anchor="docinfo" title=".docinfo">
+    <t>Hide from visible content.</t>
+  </section>
+
   <section anchor="eref" title=".eref">
     <t>Standard link formatting (underlined, change in color).</t>
+  </section>
+
+  <section anchor="finalized" title=".finalized">
+    <t>Hide from visible content.</t>
   </section>
 
   <section anchor="note" title=".note"> 
@@ -181,6 +189,10 @@ classes defined in draft-hildebrand-html-rfc.</t>
 
   <section anchor="relref" title=".relref">
     <t>Should be clearly distinguished as links.</t>
+  </section>
+
+  <section anchor="rendered" title=".rendered">
+    <t>Hide from visible content.</t>
   </section>
 
   <section anchor="sourcecode" title=".sourcecode">
