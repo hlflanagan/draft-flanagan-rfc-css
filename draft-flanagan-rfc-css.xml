@@ -8,7 +8,7 @@
 <!ENTITY I-D.flanagan-rfc-framework SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.flanagan-rfc-framework.xml">
 ]>
 
-<rfc ipr="trust200902" docName="draft-flanagan-rfc-css-01" category="info">
+<rfc ipr="trust200902" docName="draft-flanagan-rfc-css-02" category="info">
 
 <?rfc toc="yes"?>
 
@@ -29,10 +29,7 @@
     <abstract>
 
 
-<t>While individuals may choose their own Cascading Style Sheet for presenting
- HTML-formatted RFCs, the default offered by the RFC Editor must meet certain 
-requirements.  This draft describes those requirements and is based on the 
-classes defined in draft-hildebrand-html-rfc.</t>
+<t>The HTML format for RFCs, described in <xref target="I-D.hildebrand-html-rfc"/> assigns style guidance to an RFC Editor-defined Cascading Style Sheet (CSS).  The embedded, default CSS as included by the RFC Editor is expected to take into account accessibility needs and be built along a responsive design model.  This document describes the requirements for the default CSS used by the RFC Editor. The class names are based on the classes defined in draft-hildebrand-html-rfc. </t> 
 
 <t>Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.</t>
 
@@ -74,7 +71,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
 
 <section anchor="title-page-header" title="Title Page Header">
 
-<t>The document header must be at the top of the page and include all information described in the "Style Guide" and "RFC Streams, Headers, and Boilerplates" <xref target="RFC7322"/> <xref target="RFC5741"/></t>
+<t>The document header must be at the top of the document and include all information described in the "Style Guide" and "RFC Streams, Headers, and Boilerplates" <xref target="RFC7322"/> <xref target="RFC5741"/></t>
 
 </section>
 <section anchor="body" title="Body">
@@ -109,17 +106,25 @@ classes defined in draft-hildebrand-html-rfc.</t>
 
 </section>
 <section anchor="lists" title="Lists">
-  <t>Lists should provide ample whitespace between list elements for legibility unless a ‘compact’ class is specified (e.g., .dlcompact, .ulcompact, .olcompact).</t>
+  <t>Lists should provide ample whitespace between list elements for legibility unless a ‘compact’ class is specified (e.g., .dlCompact, .ulCompact, .olCompact).</t>
 </section>
 
 <section anchor="css-classes" title="CSS Classes and Attributes">
 <t>This section describes the CSS classes that result in specific changes to the natural language content of a document. A full list of available classes, not including basic selectors, are included in "Appendix A".</t>
 
+  <section anchor="alignCenter" title=".alignCenter">
+   <t>To be used with '.artwork' to indicate the figure should align in the center of the page flow.</t>
+  </section>
+
+  <section anchor="alignRight" title=".alignRight">
+   <t>To be used with '.artwork' to indicate the figure should align on the right of the page flow.</t>
+  </section>
+
   <section anchor="artwork" title=".artwork">
   <t>These classes will mostly be styled as part of .artwork.  Specific
   classes may include '.art-ascii-art' and '.art-svg'. Artwork will be held 
   in its own block of space, centered in the page flow, and will not float. 
-  Images shoul dhave a max width of 100% so views will scale properly across
+  Images should have a max width of 100% so views will scale properly across
   a variety of screens and devices.</t>
 
     <section anchor="art-ascii-art" title=".art-ascii-art">
@@ -129,6 +134,16 @@ classes defined in draft-hildebrand-html-rfc.</t>
     <section anchor="art-logo" title=".art-logo">
     <t>No visible changes to the natural language content; keep in default style. Note that such images are not currently allowed in RFCs.</t>
     </section>
+  </section>
+
+  <section anchor="closeParen" title=".closeParen">
+    <t>Close the whitespace before a closing parenthesis after a &lt;span&gt; block by moving the text within the block to the right and moving the closing parenthesis to the left..</t>
+  </section>
+
+  <section anchor="comma" title=".comma">
+    <t>Close the whitespace before a comma after a &lt;span&gt; block 
+       by moving the text within the block to the left and moving the 
+       comma to the right.</t>
   </section>
 
   <section anchor="cref" title=".cref">
@@ -141,20 +156,24 @@ classes defined in draft-hildebrand-html-rfc.</t>
     <t>For I-Ds only; not for RFCs.</t>
   </section>
 
-  <section anchor="cref-source" title=".cref-source">
+  <section anchor="crefSource" title=".crefSource">
     <t>A comment within an I-D; should be visually distinct.</t>
     <t>For I-Ds only; not for RFCs.</t>
   </section>
 
-  <section anchor="dlparallel" title=".dlparallel">
-    <t>Do not use the standard hanging indent for a definition list; align terms and definitions along left side.</t>
-  </section>
-
-  <section anchor="dlcompact" title=".dlcompact">
+  <section anchor="dlCompact" title=".dlCompact">
     <t>Use less spacing on a definition list than the default.</t>
   </section>
 
-  <section anchor="docinfo" title=".docinfo">
+  <section anchor="dlHanging" title=".dlHanging">
+    <t>Use the standard hanging indent for a definition list; indent terms.</t>
+  </section>
+
+  <section anchor="dlParallel" title=".dlParallel">
+    <t>Do not use the standard hanging indent for a definition list; align terms and definitions along left side.</t>
+  </section>
+
+  <section anchor="docInfo" title=".docInfo">
     <t>Hide from visible content.</t>
   </section>
 
@@ -166,25 +185,42 @@ classes defined in draft-hildebrand-html-rfc.</t>
     <t>Hide from visible content.</t>
   </section>
 
+  <section anchor="fullStop" title=".fullStop">
+    <t>Close the whitespace before a period or full stop after 
+       a &lt;span&gt; block by moving the text within the block to the left
+       and moving the period to the right.</t>
+  </section>
+
   <section anchor="note" title=".note"> 
     <t>Notes should be emphasized and distinct from normal paragraph text.
     </t>
-    <section anchor="rfceditor-remove" title=".rfceditor-remove">
-      <t>An rfceditor note may be added after the standard boilerplage. It should be visually distinct to highlight final removal of the note by the RFC Editor.</t>
+    <section anchor="rfcEditorRemove" title=".rfcEditorRemove">
+      <t>An RFC Editor note may be added after the standard boilerplage. It should be visually distinct to highlight final removal of the note by the RFC Editor.</t>
     </section>
   </section>
 
-  <section anchor="olcompact" title=".olcompact">
+  <section anchor="olCompact" title=".olCompact">
     <t>Use less spacing on a numbered list than the default.</t>
   </section>
 
-  <section anchor="olpercent" title=".olpercent">
-    <t>If the style attribute from the source XML contains a percent sign, a particular style setting will be required to make this setting behave like an HTML ordered list.</t>
+  <section anchor="olPercent" title=".olPercent">
+    <t>If the style attribute from the source XML contains a percent sign, 
+       a particular style setting will be required to make this setting 
+       behave like an HTML ordered list.</t>
+  </section>
+
+  <section anchor="openParen" title=".openParen">
+    <t>Close the whitespace after an opening parenthesis and before a 
+       &lt;span&gt; block by moving the text within the block to the left 
+       and moving the opening parenthesis to the right.</t>
   </section>
 
   <section anchor="pilcrow" title=".pilcrow">
     <t>Pilcrows, when used as described in draft-hildebrand-html-rfc, should 
-       appear at the end of the paragraph, artwork, or sourcecode segment.</t>
+       appear at the end of the paragraph, artwork, or sourcecode segment. 
+       They should not appear until moused-over. They should not show when 
+       printed, and should not be selected when copied with a copy/paste 
+       function.</t>
   </section>
 
   <section anchor="relref" title=".relref">
@@ -196,32 +232,35 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="sourcecode" title=".sourcecode">
-    <t>Code examples or components should be in a fixed-width font if the human language used has an available fixed-width font option, and should be visually distinct. If no fixed-width font is available, use the default font for that human language.</t>
-    <section anchor="lang-" title=".lang-">
+    <t>Code examples or components should be in a fixed-width font if the 
+       human language used has an available fixed-width font option, and 
+       should be visually distinct. If no fixed-width font is available, 
+       use the default font for that human language.</t>
+    <section anchor="lang-" title=".lang-*">
     <t>Example: lang-c</t>
     </section>
   </section>
 
   <section anchor="toc" title=".toc">
-    <t>should be clearly distinguished using an indented, ordered list with the list style set to 'none', allowing for hyperlinked, in-line dotted number notation (e.g., 1., 1.1., 1.1.1.).</t>
+    <t>The table of contents should be clearly distinguished using an indented, ordered list with the list style set to 'none', allowing for hyperlinked, in-line dotted number notation (e.g., 1., 1.1., 1.1.1.).</t>
   </section>
 
   <section anchor="type" title=".type">
     <t>No visible changes to the natural language content; keep in default style.</t>
   </section>
 
-  <section anchor="ulcompact" title=".ulcompact">
+  <section anchor="ulCompact" title=".ulCompact">
     <t>Use less spacing on a bulleted list than the default.</t>
+  </section>
+
+  <section anchor="ulEmpty" title=".ulEmpty">
+    <t>Indent from the margin of the previous paragraph.</t>
   </section>
 
   <section anchor="url" title=".url">
     <t>Should be clearly distinguished as links.</t>
   </section>
 
-  <section anchor="workgroup" title=".workgroup">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
- 
   <section anchor="xref" title=".xref">
     <t>Should be clearly distinguished as links.</t>
   </section>
@@ -248,12 +287,16 @@ classes defined in draft-hildebrand-html-rfc.</t>
 
 <section anchor="change-log" title="Draft Change Log">
 <t>To be removed before publication</t>
+<section anchor="change-02" title="Changes from -01 to -02">
+<t>Adjusted class names where possible to a common naming pattern (CamelCase).</t>
+<t>Added alignCenter, alignRight, dlHanging, closedParen, openParen, ulEmpty</t>
+</section>
 <section anchor="change-01" title="Changes from -00 to -01">
 <t>Moved full list of classes to Appendix; only discussed classes that will have visible changes to the text in the body</t>
 <t>Introduction: text regarding expected future changes added.</t>
 <t>Body: added text regarding anchors and tags; this text also applied to .relref, .url, .xref</t>
 <t>Artwork: clarified non-floating behavior of artwork</t>
-<t>List behavior: clarified the behavior of .ulcompact, .olcompact, and .dlcompact as distinct from default list behavior; clarified behavior of .dlparallel</t>
+<t>List behavior: clarified the behavior of .ulCompact, .olCompact, and .dlCompact as distinct from default list behavior; clarified behavior of .dlparallel</t>
 <t>Note: clarified text around behavior of notes</t>
 <t>RFC: added additional class to allow the CSS to distinguish between RFCs and Internet Drafts if desired</t>
 <t>TOC: clarified text around behavior of table of contents</t>
@@ -264,8 +307,9 @@ classes defined in draft-hildebrand-html-rfc.</t>
 <t>
 <list style="symbols">
 <t>.adr</t>
+<t>.alignCenter</t>
+<t>.alignRight</t>
 <t>.annotation</t>
-<t>.anticomma</t>
 <t>.artwork
 <list style='empty'>
 <t>.art-ascii-art</t>
@@ -278,22 +322,24 @@ classes defined in draft-hildebrand-html-rfc.</t>
 <t>.authors</t>
 <t>.bcp14</t>
 <t>.city</t>
+<t>.closeParen</t>
 <t>.comma</t>
 <t>.compact</t>
 <t>.country-name</t>
 <t>.cref</t>
 <t>.crefAnchor</t>
-<t>.cref-source</t>
-<t>.dlparallel</t>
-<t>.dlcompact</t>
-<t>.docinfo</t>
+<t>.crefSource</t>
+<t>.dlCompact</t>
+<t>.dlHanging</t>
+<t>.dlParallel</t>
+<t>.docInfo</t>
 <t>.email</t>
 <t>.eref</t>
 <t>.finalized</t>
 <t>.fn</t>
+<t>.fullStop</t>
 <t>.index</t>
 <t>.indexChar</t>
-<t>.indexComma</t>
 <t>.indexIndex</t>
 <t>.indexItem</t>
 <t>.indexPrimary</t>
@@ -305,29 +351,33 @@ classes defined in draft-hildebrand-html-rfc.</t>
 <t>.irefSubItem</t>
 <t>.label</t>
 <t>.locality</t>
-<t>.namerole</t>
+<t>.nameRole</t>
 <t>.note
 <list style="empty">
-<t>.rfceditor-remove</t>
+<t>.rfcEditorRemove</t>
 </list>
 </t>
-<t>.olcompact</t>
-<t>.olpercent</t>
+<t>.olCompact</t>
+<t>.olPercent</t>
+<t>.openParen</t>
 <t>.org</t>
 <t>.organization</t>
 <t>.pilcrow</t>
 <t>.postal-code</t>
 <t>.published</t>
-<t>.refauthor</t>
-<t>.refcontent</t>
+<t>.refAuthor</t>
+<t>.refContent</t>
+<t>.refDate</t>
+<t>.refTitle</t>
 <t>.reference</t>
-<t>.referencegroup</t>
+<t>.referenceGroup</t>
 <t>.region</t>
 <t>.relref</t>
 <t>.rendered</t>
 <t>.RFC</t>
+<t>.rfcEditorRemove</t>
 <t>.role</t>
-<t>.self-ref</t>
+<t>.selfRef</t>
 <t>.series</t>
 <t>.seriesInfo</t>
 <t>.sourcecode
@@ -342,7 +392,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
 <t>.tel</t>
 <t>.toc</t>
 <t>.type</t>
-<t>.ulcompact</t>
+<t>.ulCompact</t>
 <t>.url</t>
 <t>.workgroup</t>
 <t>.xref</t>
