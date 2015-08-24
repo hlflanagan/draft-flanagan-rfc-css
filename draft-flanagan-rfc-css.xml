@@ -23,7 +23,7 @@
       </address>
     </author>
 
-    <date year="2015" month="August" day="11"/>
+    <date year="2015" month="August" day="24"/>
     
 
     <abstract>
@@ -50,7 +50,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
 
 <t>The HTML format for RFCs, described in <xref target="I-D.hildebrand-html-rfc"/> assigns style guidance to an RFC Editor-defined Cascading Style Sheet (CSS).  This CSS will be embedded in the published HTML, and may be overridden by a locally defined CSS as desired.  The embedded, default CSS as included by the RFC Editor is expected to take into account accessibility needs and be built along a responsive design model.</t>
 
-<t>This document describes the requirements for the default CSS used by the RFC Editor.  A class is identified for Internet Drafts, such that certain features found only in I-Ds may be made distinct in some fashion within those drafts.  The requirements will only be applied to HTML documents published by the RFC Editor as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
+<t>This document describes the requirements for the default CSS used by the RFC Editor. Unless called out otherwise, any styling provided for these classes must not alter the natural language content in any visible way.  Many of these classes are provided to mark the elements semantically: elements using them should simply inherit their surrounding styling. Exceptions are called out below. A class is identified for Internet Drafts, such that certain features found only in I-Ds may be made distinct in some fashion within those drafts.  The requirements will only be applied to HTML documents published by the RFC Editor as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
 
 <t>The details described in this document are expected to change based on experience gained in implementing the RFC production center's toolset. Revised documents will be published capturing those changes as the toolset is completed. Other implementers must not expect those changes to remain backwards-compatible with the details described this document.</t>
 
@@ -111,21 +111,9 @@ classes defined in draft-hildebrand-html-rfc.</t>
 <section anchor="lists" title="Lists">
   <t>Lists should provide ample whitespace between list elements for legibility unless a ‘compact’ class is specified (e.g., .dlcompact, .ulcompact, .olcompact).</t>
 </section>
+
 <section anchor="css-classes" title="CSS Classes and Attributes">
-<t>This section describes the CSS classes specific to RFCs.  Basic
-   selectors are not described.</t>
-
-  <section anchor="adr" title=".adr">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="annotation" title=".annotation">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="anticomma" title=".anticomma">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
+<t>This section describes the CSS classes that result in specific changes to the natural language content of a document. A full list of available classes, not including basic selectors, are included in "Appendix A".</t>
 
   <section anchor="artwork" title=".artwork">
   <t>These classes will mostly be styled as part of .artwork.  Specific
@@ -141,38 +129,6 @@ classes defined in draft-hildebrand-html-rfc.</t>
     <section anchor="art-logo" title=".art-logo">
     <t>No visible changes to the natural language content; keep in default style. Note that such images are not currently allowed in RFCs.</t>
     </section>
-  </section>
-
-  <section anchor="ascii" title=".ascii">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="author" title=".author">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="authors" title=".authors">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="bcp14" title=".bcp14">
-  <t>This will not result in any special action on the part of the RFC Editor CSS. Local CSS files may choose to highlight or otherwise emphasize keywords identified with this tag.</t>
-  </section>
-
-  <section anchor="city" title=".city">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="code" title=".code">
-    <t>Code examples or components should be in a fixed-width font if the human language used has an available fixed-width font option, and should be visually distinct. If no fixed-width font is available, use the default font for that human language.</t>
-  </section>
-
-  <section anchor="comma" title=".comma">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="country-name" title=".country-name">
-    <t>No visible changes to the natural language content; keep in default style.</t>
   </section>
 
   <section anchor="cref" title=".cref">
@@ -199,11 +155,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="docinfo" title=".docinfo">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="email" title=".email">
-    <t>No visible changes to the natural language content; keep in default style.</t>
+    <t>Hide from visible content.</t>
   </section>
 
   <section anchor="eref" title=".eref">
@@ -211,71 +163,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="finalized" title=".finalized">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="fn" title=".fn">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="index" title=".index">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="indexChar" title=".indexChar">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="indexComma" title=".indexComma">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="indexIndex" title=".indexIndex">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="indexItem" title=".indexItem">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="indexPrimary" title=".indexPrimary">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="indexSubItem" title="indexSubItem">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="initial" title=".initial">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="iref" title=".iref">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
- 
-  <section anchor="irefItem" title=".irefItem">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
- 
-  <section anchor="irefRefs" title=".irefRefs">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="irefSubItem" title=".irefSubItem">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="label" title=".label">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="locality" title=".locality">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
- 
-  <section anchor="namerole" title=".namerole">
-    <t>No visible changes to the natural language content; keep in default style.</t>
+    <t>Hide from visible content.</t>
   </section>
 
   <section anchor="note" title=".note"> 
@@ -294,45 +182,9 @@ classes defined in draft-hildebrand-html-rfc.</t>
     <t>If the style attribute from the source XML contains a percent sign, a particular style setting will be required to make this setting behave like an HTML ordered list.</t>
   </section>
 
-  <section anchor="org" title=".org">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="organization" title=".organization">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
   <section anchor="pilcrow" title=".pilcrow">
     <t>Pilcrows, when used as described in draft-hildebrand-html-rfc, should 
        appear at the end of the paragraph, artwork, or sourcecode segment.</t>
-  </section>
-
-  <section anchor="postal-code" title=".postal-code">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
- 
-  <section anchor="published" title=".published">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="refauthor" title=".refauthor">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="refcontent" title=".refcontent">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="reference" title=".reference">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="referencegroup" title=".referencegroup">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="region" title=".region">
-    <t>No visible changes to the natural language content; keep in default style.</t>
   </section>
 
   <section anchor="relref" title=".relref">
@@ -340,50 +192,14 @@ classes defined in draft-hildebrand-html-rfc.</t>
   </section>
 
   <section anchor="rendered" title=".rendered">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="rfc" title=".RFC">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="role" title=".role">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="self-ref" title=".self-ref">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="series" title=".series">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="seriesInfo" title=".seriesInfo">
-    <t>No visible changes to the natural language content; keep in default style.</t>
+    <t>Hide from visible content.</t>
   </section>
 
   <section anchor="sourcecode" title=".sourcecode">
-    <t>Same styling as ".code"</t>
+    <t>Code examples or components should be in a fixed-width font if the human language used has an available fixed-width font option, and should be visually distinct. If no fixed-width font is available, use the default font for that human language.</t>
     <section anchor="lang-" title=".lang-">
     <t>Example: lang-c</t>
     </section>
-  </section>
-
-  <section anchor="status" title=".status">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="street-address" title=".street-address">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="surname" title=".surname">
-    <t>No visible changes to the natural language content; keep in default style.</t>
-  </section>
-
-  <section anchor="tel" title=".tel">
-    <t>No visible changes to the natural language content; keep in default style.</t>
   </section>
 
   <section anchor="toc" title=".toc">
@@ -433,7 +249,7 @@ classes defined in draft-hildebrand-html-rfc.</t>
 <section anchor="change-log" title="Draft Change Log">
 <t>To be removed before publication</t>
 <section anchor="change-01" title="Changes from -00 to -01">
-<t>All sections: changed language from "no visible changes to the text" to "No visible changes to the natural language content; keep in default style."</t>
+<t>Moved full list of classes to Appendix; only discussed classes that will have visible changes to the text in the body</t>
 <t>Introduction: text regarding expected future changes added.</t>
 <t>Body: added text regarding anchors and tags; this text also applied to .relref, .url, .xref</t>
 <t>Artwork: clarified non-floating behavior of artwork</t>
@@ -442,6 +258,97 @@ classes defined in draft-hildebrand-html-rfc.</t>
 <t>RFC: added additional class to allow the CSS to distinguish between RFCs and Internet Drafts if desired</t>
 <t>TOC: clarified text around behavior of table of contents</t>
 </section>
+</section>
+
+<section anchor="appendix-a" title="Appendix A. List of classes">
+<t>
+<list style="symbols">
+<t>.adr</t>
+<t>.annotation</t>
+<t>.anticomma</t>
+<t>.artwork
+<list style='empty'>
+<t>.art-ascii-art</t>
+<t>.art-logo</t>
+<t>.art-svg</t>
+</list>
+</t>
+<t>.ascii</t>
+<t>.author</t>
+<t>.authors</t>
+<t>.bcp14</t>
+<t>.city</t>
+<t>.comma</t>
+<t>.compact</t>
+<t>.country-name</t>
+<t>.cref</t>
+<t>.crefAnchor</t>
+<t>.cref-source</t>
+<t>.dlparallel</t>
+<t>.dlcompact</t>
+<t>.docinfo</t>
+<t>.email</t>
+<t>.eref</t>
+<t>.finalized</t>
+<t>.fn</t>
+<t>.index</t>
+<t>.indexChar</t>
+<t>.indexComma</t>
+<t>.indexIndex</t>
+<t>.indexItem</t>
+<t>.indexPrimary</t>
+<t>.indexSubItem</t>
+<t>.initial</t>
+<t>.iref</t>
+<t>.irefItem</t>
+<t>.irefRefs</t>
+<t>.irefSubItem</t>
+<t>.label</t>
+<t>.locality</t>
+<t>.namerole</t>
+<t>.note
+<list style="empty">
+<t>.rfceditor-remove</t>
+</list>
+</t>
+<t>.olcompact</t>
+<t>.olpercent</t>
+<t>.org</t>
+<t>.organization</t>
+<t>.pilcrow</t>
+<t>.postal-code</t>
+<t>.published</t>
+<t>.refauthor</t>
+<t>.refcontent</t>
+<t>.reference</t>
+<t>.referencegroup</t>
+<t>.region</t>
+<t>.relref</t>
+<t>.rendered</t>
+<t>.RFC</t>
+<t>.role</t>
+<t>.self-ref</t>
+<t>.series</t>
+<t>.seriesInfo</t>
+<t>.sourcecode
+<list style="empty">
+<t>.lang-</t>
+</list>
+</t>
+<t>.street-address</t>
+<t>.status</t>
+<t>.street-address</t>
+<t>.surname</t>
+<t>.tel</t>
+<t>.toc</t>
+<t>.type</t>
+<t>.ulcompact</t>
+<t>.url</t>
+<t>.workgroup</t>
+<t>.xref</t>
+<t>.vcard</t>
+</list>
+</t>
 </section>
 
   </middle>
