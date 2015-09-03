@@ -4,12 +4,12 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                           August 25, 2015
-Expires: February 26, 2016
+Intended status: Informational                         September 3, 2015
+Expires: March 6, 2016
 
 
                        CSS Requirements for RFCs
-                       draft-flanagan-rfc-css-03
+                       draft-flanagan-rfc-css-04
 
 Abstract
 
@@ -40,7 +40,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on February 26, 2016.
+   This Internet-Draft will expire on March 6, 2016.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Flanagan                Expires February 26, 2016               [Page 1]
+Flanagan                  Expires March 6, 2016                 [Page 1]
 
-Internet-Draft                     I-D                       August 2015
+Internet-Draft                     I-D                    September 2015
 
 
    publication of this document.  Please review these documents
@@ -80,7 +80,7 @@ Table of Contents
      7.1.  .alignCenter  . . . . . . . . . . . . . . . . . . . . . .   5
      7.2.  .alignRight . . . . . . . . . . . . . . . . . . . . . . .   5
      7.3.  .artwork  . . . . . . . . . . . . . . . . . . . . . . . .   5
-       7.3.1.  .art-ascii-art  . . . . . . . . . . . . . . . . . . .   6
+       7.3.1.  .art-ascii-art  . . . . . . . . . . . . . . . . . . .   5
        7.3.2.  .art-logo . . . . . . . . . . . . . . . . . . . . . .   6
      7.4.  .closeParen . . . . . . . . . . . . . . . . . . . . . . .   6
      7.5.  .comma  . . . . . . . . . . . . . . . . . . . . . . . . .   6
@@ -89,7 +89,7 @@ Table of Contents
      7.8.  .crefSource . . . . . . . . . . . . . . . . . . . . . . .   6
      7.9.  .dlCompact  . . . . . . . . . . . . . . . . . . . . . . .   6
      7.10. .dlHanging  . . . . . . . . . . . . . . . . . . . . . . .   6
-     7.11. .dlParallel . . . . . . . . . . . . . . . . . . . . . . .   7
+     7.11. .dlParallel . . . . . . . . . . . . . . . . . . . . . . .   6
      7.12. .docInfo  . . . . . . . . . . . . . . . . . . . . . . . .   7
      7.13. .eref . . . . . . . . . . . . . . . . . . . . . . . . . .   7
      7.14. .finalized  . . . . . . . . . . . . . . . . . . . . . . .   7
@@ -104,19 +104,18 @@ Table of Contents
      7.22. .rendered . . . . . . . . . . . . . . . . . . . . . . . .   8
      7.23. .sourcecode . . . . . . . . . . . . . . . . . . . . . . .   8
      7.24. .toc  . . . . . . . . . . . . . . . . . . . . . . . . . .   8
-     7.25. .type . . . . . . . . . . . . . . . . . . . . . . . . . .   8
-     7.26. .ulCompact  . . . . . . . . . . . . . . . . . . . . . . .   8
+     7.25. .ulCompact  . . . . . . . . . . . . . . . . . . . . . . .   8
+     7.26. .ulEmpty  . . . . . . . . . . . . . . . . . . . . . . . .   8
 
 
 
-Flanagan                Expires February 26, 2016               [Page 2]
+Flanagan                  Expires March 6, 2016                 [Page 2]
 
-Internet-Draft                     I-D                       August 2015
+Internet-Draft                     I-D                    September 2015
 
 
-     7.27. .ulEmpty  . . . . . . . . . . . . . . . . . . . . . . . .   8
-     7.28. .url  . . . . . . . . . . . . . . . . . . . . . . . . . .   8
-     7.29. .xref . . . . . . . . . . . . . . . . . . . . . . . . . .   9
+     7.27. .url  . . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     7.28. .xref . . . . . . . . . . . . . . . . . . . . . . . . . .   8
    8.  Security Considerations . . . . . . . . . . . . . . . . . . .   9
    9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   9
    10. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   9
@@ -140,14 +139,14 @@ Internet-Draft                     I-D                       August 2015
 
    This document describes the requirements for the default CSS used by
    the RFC Editor.  Unless called out otherwise, any styling provided
-   for these classes must not alter the natural language content in any
-   visible way.  Many of these classes are provided to mark the elements
-   semantically: elements using them should simply inherit their
-   surrounding styling.  Exceptions are called out below.  A class is
-   identified for Internet Drafts, such that certain features found only
-   in I-Ds may be made distinct in some fashion within those drafts.
-   The requirements will only be applied to HTML documents published by
-   the RFC Editor as per [I-D.flanagan-rfc-framework].
+   for these classes must not change the presentation of the content in
+   any visible way.  Many of these classes are provided to mark the
+   elements semantically: elements using them should simply inherit
+   their surrounding styling.  Exceptions are called out below.  A class
+   is identified for Internet Drafts, such that certain features found
+   only in I-Ds may be made distinct in some fashion within those
+   drafts.  The requirements will only be applied to HTML documents
+   published by the RFC Editor as per [I-D.flanagan-rfc-framework].
 
    The details described in this document are expected to change based
    on experience gained in implementing the RFC production center's
@@ -165,9 +164,10 @@ Internet-Draft                     I-D                       August 2015
 
 
 
-Flanagan                Expires February 26, 2016               [Page 3]
+
+Flanagan                  Expires March 6, 2016                 [Page 3]
 
-Internet-Draft                     I-D                       August 2015
+Internet-Draft                     I-D                    September 2015
 
 
 3.  General Requirements
@@ -221,9 +221,9 @@ Internet-Draft                     I-D                       August 2015
 
 
 
-Flanagan                Expires February 26, 2016               [Page 4]
+Flanagan                  Expires March 6, 2016                 [Page 4]
 
-Internet-Draft                     I-D                       August 2015
+Internet-Draft                     I-D                    September 2015
 
 
    o  A fixed-width font must be used for code and artwork-tagged
@@ -247,10 +247,9 @@ Internet-Draft                     I-D                       August 2015
 
 7.  CSS Classes and Attributes
 
-   This section describes the CSS classes that result in specific
-   changes to the natural language content of a document.  A full list
-   of available classes, not including basic selectors, are included in
-   "Appendix A".
+   This section describes the CSS classes that result in changes to the
+   presentation of the contents of a document.  A full list of available
+   classes, not including basic selectors, are included in "Appendix A".
 
 7.1.  .alignCenter
 
@@ -270,26 +269,23 @@ Internet-Draft                     I-D                       August 2015
    not float.  Images should have a max width of 100% so views will
    scale properly across a variety of screens and devices.
 
-
-
-
-
-
-
-
-Flanagan                Expires February 26, 2016               [Page 5]
-
-Internet-Draft                     I-D                       August 2015
-
-
 7.3.1.  .art-ascii-art
 
    Must use a mono-spaced font.
 
+
+
+
+
+Flanagan                  Expires March 6, 2016                 [Page 5]
+
+Internet-Draft                     I-D                    September 2015
+
+
 7.3.2.  .art-logo
 
-   No visible changes to the natural language content; keep in default
-   style.  Note that such images are not currently allowed in RFCs.
+   No visible changes; inherit the current styling in effect.  Note that
+   such images are not currently allowed in RFCs.
 
 7.4.  .closeParen
 
@@ -329,23 +325,22 @@ Internet-Draft                     I-D                       August 2015
 
    Use the standard hanging indent for a definition list; indent terms.
 
-
-
-
-
-Flanagan                Expires February 26, 2016               [Page 6]
-
-Internet-Draft                     I-D                       August 2015
-
-
 7.11.  .dlParallel
 
    Do not use the standard hanging indent for a definition list; align
    terms and definitions along left side.
 
+
+
+
+Flanagan                  Expires March 6, 2016                 [Page 6]
+
+Internet-Draft                     I-D                    September 2015
+
+
 7.12.  .docInfo
 
-   Hide from visible content.
+   Hide from visible presentation of content.
 
 7.13.  .eref
 
@@ -353,7 +348,7 @@ Internet-Draft                     I-D                       August 2015
 
 7.14.  .finalized
 
-   Hide from visible content.
+   Hide from visible presentation of content.
 
 7.15.  .fullStop
 
@@ -389,9 +384,14 @@ Internet-Draft                     I-D                       August 2015
 
 
 
-Flanagan                Expires February 26, 2016               [Page 7]
+
+
+
+
+
+Flanagan                  Expires March 6, 2016                 [Page 7]
 
-Internet-Draft                     I-D                       August 2015
+Internet-Draft                     I-D                    September 2015
 
 
 7.20.  .pilcrow
@@ -408,7 +408,7 @@ Internet-Draft                     I-D                       August 2015
 
 7.22.  .rendered
 
-   Hide from visible content.
+   Hide from visible presentation of content.
 
 7.23.  .sourcecode
 
@@ -424,20 +424,19 @@ Internet-Draft                     I-D                       August 2015
    for hyperlinked, in-line dotted number notation (e.g., 1., 1.1.,
    1.1.1.).
 
-7.25.  .type
-
-   No visible changes to the natural language content; keep in default
-   style.
-
-7.26.  .ulCompact
+7.25.  .ulCompact
 
    Use less spacing on a bulleted list than the default.
 
-7.27.  .ulEmpty
+7.26.  .ulEmpty
 
    Indent from the margin of the previous paragraph.
 
-7.28.  .url
+7.27.  .url
+
+   Should be clearly distinguished as links.
+
+7.28.  .xref
 
    Should be clearly distinguished as links.
 
@@ -445,14 +444,11 @@ Internet-Draft                     I-D                       August 2015
 
 
 
-Flanagan                Expires February 26, 2016               [Page 8]
+
+Flanagan                  Expires March 6, 2016                 [Page 8]
 
-Internet-Draft                     I-D                       August 2015
+Internet-Draft                     I-D                    September 2015
 
-
-7.29.  .xref
-
-   Should be clearly distinguished as links.
 
 8.  Security Considerations
 
@@ -499,15 +495,16 @@ Internet-Draft                     I-D                       August 2015
 
    Introduction: text regarding expected future changes added.
 
-
-
-Flanagan                Expires February 26, 2016               [Page 9]
-
-Internet-Draft                     I-D                       August 2015
-
-
    Body: added text regarding anchors and tags; this text also applied
    to .relref, .url, .xref
+
+
+
+
+Flanagan                  Expires March 6, 2016                 [Page 9]
+
+Internet-Draft                     I-D                    September 2015
+
 
    Artwork: clarified non-floating behavior of artwork
 
@@ -538,31 +535,32 @@ Internet-Draft                     I-D                       August 2015
 
    [I-D.hildebrand-html-rfc]
               Hildebrand, J. and P. Hoffman, "HyperText Markup Language
-              Request For Comments Format", draft-hildebrand-html-rfc-09
+              Request For Comments Format", draft-hildebrand-html-rfc-10
               (work in progress), August 2015.
 
    [I-D.flanagan-rfc-framework]
               Flanagan, H., "RFC Format Framework", draft-flanagan-rfc-
-              framework-04 (work in progress), June 2015.
+              framework-05 (work in progress), August 2015.
 
 Appendix A.  List of classes
 
    This section lists all the CSS classes.  Except for those also listed
-   above in section 7, none of these result in specific changes to the
-   natural language content of a document.
+   above in section 7, none of these result in changes to the content of
+   a document.
 
    o  .adr
 
    o  .alignCenter
 
-
-
-Flanagan                Expires February 26, 2016              [Page 10]
-
-Internet-Draft                     I-D                       August 2015
-
-
    o  .alignRight
+
+
+
+
+Flanagan                  Expires March 6, 2016                [Page 10]
+
+Internet-Draft                     I-D                    September 2015
+
 
    o  .annotation
 
@@ -610,15 +608,15 @@ Internet-Draft                     I-D                       August 2015
 
    o  .eref
 
-
-
-
-Flanagan                Expires February 26, 2016              [Page 11]
-
-Internet-Draft                     I-D                       August 2015
-
-
    o  .finalized
+
+
+
+
+Flanagan                  Expires March 6, 2016                [Page 11]
+
+Internet-Draft                     I-D                    September 2015
+
 
    o  .fn
 
@@ -666,15 +664,15 @@ Internet-Draft                     I-D                       August 2015
 
    o  .organization
 
-
-
-
-Flanagan                Expires February 26, 2016              [Page 12]
-
-Internet-Draft                     I-D                       August 2015
-
-
    o  .pilcrow
+
+
+
+
+Flanagan                  Expires March 6, 2016                [Page 12]
+
+Internet-Draft                     I-D                    September 2015
+
 
    o  .postal-code
 
@@ -722,15 +720,15 @@ Internet-Draft                     I-D                       August 2015
 
    o  .surname
 
-
-
-
-Flanagan                Expires February 26, 2016              [Page 13]
-
-Internet-Draft                     I-D                       August 2015
-
-
    o  .tel
+
+
+
+
+Flanagan                  Expires March 6, 2016                [Page 13]
+
+Internet-Draft                     I-D                    September 2015
+
 
    o  .toc
 
@@ -781,4 +779,6 @@ Author's Address
 
 
 
-Flanagan                Expires February 26, 2016              [Page 14]
+
+
+Flanagan                  Expires March 6, 2016                [Page 14]

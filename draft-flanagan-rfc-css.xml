@@ -8,7 +8,7 @@
 <!ENTITY I-D.flanagan-rfc-framework SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.flanagan-rfc-framework.xml">
 ]>
 
-<rfc ipr="trust200902" docName="draft-flanagan-rfc-css-03" category="info">
+<rfc ipr="trust200902" docName="draft-flanagan-rfc-css-04" category="info">
 
 <?rfc toc="yes"?>
 
@@ -23,7 +23,7 @@
       </address>
     </author>
 
-    <date year="2015" month="August" day="25"/>
+    <date year="2015" month="September" day="3"/>
     
 
     <abstract>
@@ -47,7 +47,7 @@
 
 <t>The HTML format for RFCs, described in <xref target="I-D.hildebrand-html-rfc"/> assigns style guidance to an RFC Editor-defined Cascading Style Sheet (CSS).  This CSS will be embedded in the published HTML, and may be overridden by a locally defined CSS as desired.  The embedded, default CSS as included by the RFC Editor is expected to take into account accessibility needs and be built along a responsive design model.</t>
 
-<t>This document describes the requirements for the default CSS used by the RFC Editor. Unless called out otherwise, any styling provided for these classes must not alter the natural language content in any visible way.  Many of these classes are provided to mark the elements semantically: elements using them should simply inherit their surrounding styling. Exceptions are called out below. A class is identified for Internet Drafts, such that certain features found only in I-Ds may be made distinct in some fashion within those drafts.  The requirements will only be applied to HTML documents published by the RFC Editor as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
+<t>This document describes the requirements for the default CSS used by the RFC Editor. Unless called out otherwise, any styling provided for these classes must not change the presentation of the content in any visible way.  Many of these classes are provided to mark the elements semantically: elements using them should simply inherit their surrounding styling. Exceptions are called out below. A class is identified for Internet Drafts, such that certain features found only in I-Ds may be made distinct in some fashion within those drafts.  The requirements will only be applied to HTML documents published by the RFC Editor as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
 
 <t>The details described in this document are expected to change based on experience gained in implementing the RFC production center's toolset. Revised documents will be published capturing those changes as the toolset is completed. Other implementers must not expect those changes to remain backwards-compatible with the details described in this document.</t>
 
@@ -110,7 +110,7 @@
 </section>
 
 <section anchor="css-classes" title="CSS Classes and Attributes">
-<t>This section describes the CSS classes that result in specific changes to the natural language content of a document. A full list of available classes, not including basic selectors, are included in "Appendix A".</t>
+<t>This section describes the CSS classes that result in changes to the presentation of the contents of a document. A full list of available classes, not including basic selectors, are included in "Appendix A".</t>
 
   <section anchor="alignCenter" title=".alignCenter">
    <t>To be used with '.artwork' to indicate the figure should align in the center of the page flow.</t>
@@ -132,7 +132,7 @@
     </section>
 
     <section anchor="art-logo" title=".art-logo">
-    <t>No visible changes to the natural language content; keep in default style. Note that such images are not currently allowed in RFCs.</t>
+    <t>No visible changes; inherit the current styling in effect. Note that such images are not currently allowed in RFCs.</t>
     </section>
   </section>
 
@@ -174,7 +174,7 @@
   </section>
 
   <section anchor="docInfo" title=".docInfo">
-    <t>Hide from visible content.</t>
+    <t>Hide from visible presentation of content.</t>
   </section>
 
   <section anchor="eref" title=".eref">
@@ -182,7 +182,7 @@
   </section>
 
   <section anchor="finalized" title=".finalized">
-    <t>Hide from visible content.</t>
+    <t>Hide from visible presentation of content.</t>
   </section>
 
   <section anchor="fullStop" title=".fullStop">
@@ -228,7 +228,7 @@
   </section>
 
   <section anchor="rendered" title=".rendered">
-    <t>Hide from visible content.</t>
+    <t>Hide from visible presentation of content.</t>
   </section>
 
   <section anchor="sourcecode" title=".sourcecode">
@@ -240,10 +240,6 @@
 
   <section anchor="toc" title=".toc">
     <t>The table of contents should be clearly distinguished using an indented, ordered list with the list style set to 'none', allowing for hyperlinked, in-line dotted number notation (e.g., 1., 1.1., 1.1.1.).</t>
-  </section>
-
-  <section anchor="type" title=".type">
-    <t>No visible changes to the natural language content; keep in default style.</t>
   </section>
 
   <section anchor="ulCompact" title=".ulCompact">
@@ -284,6 +280,9 @@
 
 <section anchor="change-log" title="Draft Change Log">
 <t>To be removed before publication</t>
+<section anchor="change-04" title="Changes from -03 to -04">
+<t>Removed phrase "natural language content" from doc</t>
+</section>
 <section anchor="change-03" title="Changes from -02 to -03">
 <t>Moved Appendix to correct location; fixed typos; moved lang-* to Appendix,</t>
 </section>
@@ -328,8 +327,8 @@
 
 <section anchor="appendix-a" title="List of classes">
 <t>This section lists all the CSS classes. Except for those also listed
-above in section 7, none of these result in specific changes to the
-natural language content of a document.</t>
+above in section 7, none of these result in changes to the content of a 
+document.</t>
 <t>
 <list style="symbols">
 <t>.adr</t>
