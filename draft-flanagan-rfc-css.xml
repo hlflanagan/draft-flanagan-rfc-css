@@ -8,7 +8,7 @@
 <!ENTITY I-D.flanagan-rfc-framework SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.flanagan-rfc-framework.xml">
 ]>
 
-<rfc ipr="trust200902" docName="draft-flanagan-rfc-css-02" category="info">
+<rfc ipr="trust200902" docName="draft-flanagan-rfc-css-03" category="info">
 
 <?rfc toc="yes"?>
 
@@ -23,7 +23,7 @@
       </address>
     </author>
 
-    <date year="2015" month="August" day="24"/>
+    <date year="2015" month="August" day="25"/>
     
 
     <abstract>
@@ -49,7 +49,7 @@
 
 <t>This document describes the requirements for the default CSS used by the RFC Editor. Unless called out otherwise, any styling provided for these classes must not alter the natural language content in any visible way.  Many of these classes are provided to mark the elements semantically: elements using them should simply inherit their surrounding styling. Exceptions are called out below. A class is identified for Internet Drafts, such that certain features found only in I-Ds may be made distinct in some fashion within those drafts.  The requirements will only be applied to HTML documents published by the RFC Editor as per <xref target="I-D.flanagan-rfc-framework"/>.</t>
 
-<t>The details described in this document are expected to change based on experience gained in implementing the RFC production center's toolset. Revised documents will be published capturing those changes as the toolset is completed. Other implementers must not expect those changes to remain backwards-compatible with the details described this document.</t>
+<t>The details described in this document are expected to change based on experience gained in implementing the RFC production center's toolset. Revised documents will be published capturing those changes as the toolset is completed. Other implementers must not expect those changes to remain backwards-compatible with the details described in this document.</t>
 
 </section>
 <section anchor="design-goals" title="Design Goal">
@@ -236,9 +236,6 @@
        human language used has an available fixed-width font option, and 
        should be visually distinct. If no fixed-width font is available, 
        use the default font for that human language.</t>
-    <section anchor="lang-" title=".lang-*">
-    <t>Example: lang-c</t>
-    </section>
   </section>
 
   <section anchor="toc" title=".toc">
@@ -287,6 +284,9 @@
 
 <section anchor="change-log" title="Draft Change Log">
 <t>To be removed before publication</t>
+<section anchor="change-03" title="Changes from -02 to -03">
+<t>Moved Appendix to correct location; fixed typos; moved lang-* to Appendix,</t>
+</section>
 <section anchor="change-02" title="Changes from -01 to -02">
 <t>Adjusted class names where possible to a common naming pattern (CamelCase).</t>
 <t>Added alignCenter, alignRight, dlHanging, closedParen, openParen, ulEmpty</t>
@@ -303,7 +303,33 @@
 </section>
 </section>
 
-<section anchor="appendix-a" title="Appendix A. List of classes">
+  </middle>
+
+  <back>
+
+    <references title='Normative References'>
+
+<reference anchor="HTMLBP" target="http://www.w3.org/standards/techs/htmlbp">
+  <front>
+    <title>Best Practices for Authoring HTML Current Status</title>
+    <author >
+      <organization>W3C</organization>
+    </author>
+    <date year="n.d."/>
+  </front>
+</reference>
+&RFC5741;
+&RFC7322;
+&I-D.hildebrand-html-rfc;
+&I-D.flanagan-rfc-framework;
+
+
+    </references>
+
+<section anchor="appendix-a" title="List of classes">
+<t>This section lists all the CSS classes. Except for those also listed
+above in section 7, none of these result in specific changes to the
+natural language content of a document.</t>
 <t>
 <list style="symbols">
 <t>.adr</t>
@@ -382,7 +408,7 @@
 <t>.seriesInfo</t>
 <t>.sourcecode
 <list style="empty">
-<t>.lang-</t>
+<t>.lang-*</t>
 </list>
 </t>
 <t>.street-address</t>
@@ -401,28 +427,6 @@
 </t>
 </section>
 
-  </middle>
-
-  <back>
-
-    <references title='Normative References'>
-
-<reference anchor="HTMLBP" target="http://www.w3.org/standards/techs/htmlbp">
-  <front>
-    <title>Best Practices for Authoring HTML Current Status</title>
-    <author >
-      <organization>W3C</organization>
-    </author>
-    <date year="n.d."/>
-  </front>
-</reference>
-&RFC5741;
-&RFC7322;
-&I-D.hildebrand-html-rfc;
-&I-D.flanagan-rfc-framework;
-
-
-    </references>
 
   </back>
 </rfc>
